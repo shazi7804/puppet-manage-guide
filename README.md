@@ -5,7 +5,6 @@ Puppet 是一個基於實現 infrastructure as a code 的組態管理工具，�
 ## Summary
 1. [前言](01.intro.md)
     1. [為什麼要用 Puppet](01-1.why-use-puppet.md)
-    2. []
 1. [基礎](02.basic.md)
     1. [安裝 Master Server](02-1.install-master-server.md)
     1. [安裝 Puppet Agent ](02-2.install-puppet-agent.md)
