@@ -1,0 +1,23 @@
+{
+  "title": "Puppet 管理者指南",
+  "description": "提供給想要入手 Puppet 的管理者，帶你進入 Puppet 的自動化世界。", 
+  "language": "zh-tw",
+  "plugins": [
+    "disqus",
+    "github",
+    "page-toc-button"
+  ],
+  "pluginsConfig": {
+    "ga": {
+      "token": "UA-50267306-2"
+    },
+    "github": {
+      "url": "https://github.com/shazi7804/puppet-manage-guide"
+    },
+    "page-toc-button": {
+      "maxTocDepth": 2,
+      "minTocSize": 2
+    }
+  }
+}
+
