@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-## 為什麼要用 Puppet
-
-
-
-而 Puppet 就是這方面的好手，你可以將所有的 Configuration 都放在 Puppet Server 上，若是遇到相同的設定，你可以直接分配設定檔給所有的 Server，只要修改對應的參數就好了。
-=======
 # 為什麼要用 Puppet
 
 減少你的工作時間。
@@ -20,8 +13,7 @@
 ![puppet-audtability](/assets/images/puppet-audtability.png)
 
 
-你可以將所有的 Configuration 都放在 Puppet Server 上，若是遇到相同的設定可以直接分配設定檔給所有的 Server，只要修改對應的參數就好了。
->>>>>>> Track 10 files into repository.
+你可以將所有的 Configuration 都放在 Puppet Server 上，若是遇到相同的設定可以直接分配設定檔給所有的 Server，只要修改對應的參數就好了。>>>>>>> Track 10 files into repository.
 
 ![puppet-capabilities](/assets/images/capabilities.png)
 
