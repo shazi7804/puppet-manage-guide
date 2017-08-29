@@ -30,10 +30,10 @@
 
 1. Puppet Master 必須準確校時。
 
-    ```bash
-    $ sudo ntpdate time.stdtime.gov.tw
-    $ sudo timedatectl set-timezone Asia/Taipei
-    ```
+  ```bash
+  $ sudo ntpdate time.stdtime.gov.tw
+  $ sudo timedatectl set-timezone Asia/Taipei
+  ```
 
 1. 安裝 Puppet Master
 
