@@ -33,7 +33,7 @@
     ```bash
 $ sudo ntpdate time.stdtime.gov.tw
 $ sudo timedatectl set-timezone Asia/Taipei
-```
+    ```
 
 1. 安裝 Puppet Master
 
