@@ -11,4 +11,4 @@
     - [利用 module 簡化 manifests 的設定檔](basic/how-to-write-module.md)
     - [對於 node 的管理](basic/how-to-manage-node.md)
 - [進階管理](advanced.md)
-    - [Role and Profile pattern 的管理方式](advanced/how-to-use-role-and-profile-pattern-manage.md)
+    - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
