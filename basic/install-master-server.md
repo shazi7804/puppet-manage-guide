@@ -53,7 +53,7 @@
   JAVA_ARGS="-Xms2g -Xmx2g"
   ```
 
-1. 修改 Puppet master 的主要設定檔 puppet.conf
+1. 修改 Puppet 的主要設定檔 [puppet.conf][puppet-conf]
 
   ```shell
   sudo vim /etc/puppetlabs/puppet/puppet.conf
@@ -74,17 +74,30 @@
     dns_alt_names = master.puppet.com
     ssl_client_header = SSL_CLIENT_S_DN
     ssl_client_verify_header = SSL_CLIENT_VERIFY
+    environment_timeout = unlimited
   ```
 
-值得一提的設定有：
+  值得一提的設定有：
 
- - 
+  - certname：Puppet master 也會安裝 agent，certname 就是這台 node 生成的證書。
+  
+  - server：Puppet master Server 的位址。
+  
+  - environment：確認這個 node 的環境，所以你的 Puppet 可以管理很多種 environment (e.x. develop/staging/production)
+  
+  - runinterval：預設為 1 小時，在測試時可以自行調整，單位為秒。
+
+  - [dns_alt_names][puppet-config-dns_alt_names]：puppet master 的備用 dns 網域，可以使用逗號分隔
 
 
 
 
 
 [^1]: https://docs.puppet.com/puppet/5.1/puppet_platform.html "About Puppet Platform and its packages"
+
+[puppet-conf]: https://docs.puppet.com/puppet/5.0/configuration.html
+
+[puppet-config-dns_alt_names]: https://docs.puppet.com/puppet/5.0/configuration.html#dnsaltnames
 
 
 
