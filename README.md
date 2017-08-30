@@ -1,9 +1,10 @@
-# Puppet 管理者指南
+# Puppet 從入門到放棄
 
 Puppet 是一個基於實現 infrastructure as a code 的組態管理工具，與其相同性質的有 Ansible、SaltStack、Chef 等工具，Puppet 的特性是幾乎涵蓋所有的 OS System，並且適合在大量佈署的環境下使用。
 
 ## Summary
 - [前言](intro.md)
+    - [什麼是 Puppet](intro/what-is-puppet.md)
     - [為什麼要用 Puppet](intro/why-use-puppet.md)
 - [基礎](basic.md)
     - [安裝 Master Server](basic/install-master-server.md)

@@ -37,15 +37,15 @@
 
 1. 安裝 Puppet Master
 
-從官方 [repository][^1] 取得 Puppet package。
+  從官方 [repository][^1] 取得 Puppet package。
 
-```bash
-$ wget https://apt.puppetlabs.com/puppet5-release-xenial.deb
-$ sudo dpkg -i puppet5-release-xenial.deb
-$ sudo apt-get update
-$ sudo apt-get install puppetserver
-```
-
+  ```bash
+  $ wget https://apt.puppetlabs.com/puppet5-release-xenial.deb
+  $ sudo dpkg -i puppet5-release-xenial.deb
+  $ sudo apt-get update
+  $ sudo apt-get install puppetserver
+  ```
+  
 
 [^1]: https://docs.puppet.com/puppet/5.1/puppet_platform.html "About Puppet Platform and its packages"
 
