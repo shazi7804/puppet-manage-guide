@@ -46,6 +46,40 @@
   $ sudo apt-get install puppetserver
   ```
   
+1. Puppet master Memory 調整，預設為 2G
+
+  ```shell
+  $ sudo vim /etc/default/puppetserver
+  JAVA_ARGS="-Xms2g -Xmx2g"
+  ```
+
+1. 修改 Puppet master 的主要設定檔 puppet.conf
+
+  ```shell
+  sudo vim /etc/puppetlabs/puppet/puppet.conf
+  
+  [main]
+    vardir = /opt/puppetlabs/server/data/puppetserver
+    logdir = /var/log/puppetlabs/puppetserver
+    rundir = /var/run/puppetlabs/puppetserver
+    pidfile = /var/run/puppetlabs/puppetserver/puppetserver.pid
+    codedir = /etc/puppetlabs/code
+    certname = master.puppet.com
+    server = master.puppet.com
+    environment = production
+    runinterval = 1h
+    strict_variables = true
+   
+  [master]
+    dns_alt_names = master.puppet.com
+    ssl_client_header = SSL_CLIENT_S_DN
+    ssl_client_verify_header = SSL_CLIENT_VERIFY
+  ```
+
+
+
+
+
 
 [^1]: https://docs.puppet.com/puppet/5.1/puppet_platform.html "About Puppet Platform and its packages"
 
