@@ -76,6 +76,9 @@
     ssl_client_verify_header = SSL_CLIENT_VERIFY
   ```
 
+值得一提的設定有：
+
+ - 
 
 
 
