@@ -13,7 +13,7 @@
 ![puppet-audtability](/assets/images/puppet-audtability.png)
 
 
-你可以將所有的 Configuration 都放在 Puppet Server 上，若是遇到相同的設定可以直接分配設定檔給所有的 Server，只要修改對應的參數就好了。>>>>>>> Track 10 files into repository.
+你可以將所有的 Configuration 都放在 Puppet Server 上，若是遇到相同的設定可以直接分配設定檔給所有的 Server，只要修改對應的參數就好了。
 
 ![puppet-capabilities](/assets/images/capabilities.png)
 
