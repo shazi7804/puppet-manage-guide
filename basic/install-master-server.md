@@ -1,3 +1,7 @@
+# 安裝 Master Server
+
+## 環境
+
 先定義好 Puppet master 和 agent 的環境：
 
   - Operating system: Ubuntu 16.04
@@ -14,18 +18,6 @@
 
     - Domain : agent.puppet.com
 
-
-# 安裝 Master Server
-
-## 環境
-
-先定義好 Puppet Master 的環境：
-
-  - Operating system : Ubuntu 16.04
-
-  - IP Address : 192.168.10.10
-
-  - HostName/Domain : master.puppet.com
 
 ## 安裝    
     
