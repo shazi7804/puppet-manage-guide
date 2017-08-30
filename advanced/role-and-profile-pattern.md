@@ -36,8 +36,20 @@ class profile::apache2::php {
 
 ## Role example
 
+```puppet
+class role::webserver {
+  include profile::user
+  include profile::apache2::php
+}
+```
 
+## Node example
 
+```puppet
+node site {
+  include role::webserver
+}
+```
 
 
 [role-and-profile-pattern]: https://docs.puppet.com/pe/2017.2/r_n_p_intro.html
