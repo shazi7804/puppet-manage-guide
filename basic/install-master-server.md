@@ -1,3 +1,20 @@
+先定義好 Puppet master 和 agent 的環境：
+
+  - Operating system: Ubuntu 16.04
+
+  - Master
+  
+    - IP Address: 192.168.10.10
+
+    - Domain : master.puppet.com
+  
+  - Agent
+    
+    - IP Address: 192.168.10.11
+
+    - Domain : agent.puppet.com
+
+
 # 安裝 Master Server
 
 ## 環境
@@ -59,46 +76,43 @@
   sudo vim /etc/puppetlabs/puppet/puppet.conf
   
   [main]
-    vardir = /opt/puppetlabs/server/data/puppetserver
-    logdir = /var/log/puppetlabs/puppetserver
-    rundir = /var/run/puppetlabs/puppetserver
-    pidfile = /var/run/puppetlabs/puppetserver/puppetserver.pid
-    codedir = /etc/puppetlabs/code
     certname = master.puppet.com
-    server = master.puppet.com
-    environment = production
-    runinterval = 1h
-    strict_variables = true
-   
-  [master]
-    dns_alt_names = master.puppet.com
-    ssl_client_header = SSL_CLIENT_S_DN
-    ssl_client_verify_header = SSL_CLIENT_VERIFY
-    environment_timeout = unlimited
   ```
 
-  值得一提的設定有：
-
-  - certname：Puppet master 也會安裝 agent，certname 就是這台 node 生成的證書。
+  certname 是用來生成這台 node 憑證使用，Puppet 之間的溝通是使用 SSL 交握。
   
-  - server：Puppet master Server 的位址。
-  
-  - environment：確認這個 node 的環境，所以你的 Puppet 可以管理很多種 environment (e.x. develop/staging/production)
-  
-  - runinterval：預設為 1 小時，在測試時可以自行調整，單位為秒。
 
-  - [dns_alt_names][puppet-config-dns_alt_names]：puppet master 的備用 dns 網域，可以使用逗號分隔
+1. 嘗試啟動 Puppet master
 
+  ```shell
+  $ sudo service puppetserver start
+  $ sudo systemctl enable puppetserver
+  ```
 
+1. 應該要 listen 8140 port，可以看到是由 Java 啟動，因為 Puppet master 是用 Java 開發。
 
+  ```shell
+  $ ss -tunlp | grep 8140
+  tcp  LISTEN  0  50  :::8140  :::*  users  (("java",pid=27866,fd=32))
+  ```
 
+1. 初始化 Puppet server 的 ca 憑證，如果沒有執行 Agent 會無法透過 ca 來產生 Agent 的 certname。
+
+  ```shell
+  $ sudo puppet cert list
+  ```
+
+1. 如果你有開啟 Firewall 記得 allow 8140
+
+  ```shell
+  $ sudo ufw allow 8140
+  ```
+
+這樣就完成 Puppet master 的安裝。
 
 [^1]: https://docs.puppet.com/puppet/5.1/puppet_platform.html "About Puppet Platform and its packages"
 
 [puppet-conf]: https://docs.puppet.com/puppet/5.0/configuration.html
-
-[puppet-config-dns_alt_names]: https://docs.puppet.com/puppet/5.0/configuration.html#dnsaltnames
-
 
 
 
