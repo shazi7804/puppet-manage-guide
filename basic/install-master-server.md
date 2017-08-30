@@ -22,7 +22,7 @@
     
   如果你還沒有定義好 Puppet Master / Agent 的 Domain，可以先設定在 hosts。
     
-  ```bash
+  ```shell
   $ cat /etc/hosts
   192.168.10.10 master.puppet.com
   192.168.10.11 agent.puppet.com
@@ -30,7 +30,7 @@
 
 1. Puppet Master 必須準確校時。
 
-  ```bash
+  ```shell
   $ sudo ntpdate time.stdtime.gov.tw
   $ sudo timedatectl set-timezone Asia/Taipei
   ```
@@ -39,7 +39,7 @@
 
   從官方 [repository][^1] 取得 Puppet package。
 
-  ```bash
+  ```shell
   $ wget https://apt.puppetlabs.com/puppet5-release-xenial.deb
   $ sudo dpkg -i puppet5-release-xenial.deb
   $ sudo apt-get update
