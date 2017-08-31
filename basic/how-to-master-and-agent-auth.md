@@ -19,7 +19,7 @@ Puppet Master 和 Agent 是使用 CA 憑證來產生 SSL Cert 進行溝通
   +-----------------+                +----------------+
 ```
 
-[CA 憑證][^1]可以是由外部頒發，或是自簽 CA，但通常會直接讓 Puppet 自簽 Internal CA，如果你用的是 Internet CA 則必須停用 Internal CA。
+CA 憑證可以是由外部頒發，或是自簽 CA，但通常會直接讓 Puppet 自簽 Internal CA，如果你用的是 Internet CA 則必須停用 Internal CA。
 
 整個認證的交易就和我們一般 HTTP 的 SSL 申請狀況相同，Agent 就像是一般企業客戶端，而 Master 就是 CA 憑證中心。
 
@@ -73,13 +73,15 @@ ami.puppet.com
 
 在 Policy-based autosigning 中你可以定義 Policy 簽署的條件，在 Agent 發出的 csr 請求中動手腳，加入一些可以提供驗證的資訊 (embedding additional data)，如 Password, token … etc，再由 Master 觸發 autosign 所執行的 script 進行驗證，這個 scirpt 不限語言，只要 return 給 Puppet 0 or 1 就行。
 
- 
-
 Puppet 官方極力推薦使用 Policy-based autosigning 這種方式進行驗證，是目前最安全且彈性的作法，甚至可以把 Policy-based autosigning 當成一個 trigger 去做許多事件。
 
+## 透過 API 簽署  (Policy executable API)
+
+延伸 Policy-based autosigning 概念的作法，你也可以透過 API 進行簽署認證，這個可以應用到更多的地方，但目前小弟還沒有實際應用。
 
 
 
 
-[^1]: https://docs.puppet.com/puppet/5.1/config_ssl_external_ca.html
+### Reference
+- [SSL configuration: autosigning certificate requests](https://docs.puppet.com/puppet/5.1/config_ssl_external_ca.html)
 
