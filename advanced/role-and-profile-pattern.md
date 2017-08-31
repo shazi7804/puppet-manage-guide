@@ -17,9 +17,12 @@ Role and Profile 有幾個要點：
 ## Profile example
 
 ```puppet
+class profile::base {
+  include ntp
+}
+
 class profile::user {
   include users
-  include ntp
 }
  
 class profile::apache2 {
