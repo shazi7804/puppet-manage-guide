@@ -11,7 +11,6 @@
     - [第一個 module 設定](basic/how-to-write-module.md)
 - [進階管理](advanced.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
-    
 - [用 Packer 佈署 Puppet](deploy-to-other.md)
     - [佈署到 Docker](deploy/how-to-build-docker.container.md)
     - [佈署到 AWS AMI](deploy/how-to-build-docker.container.md)
