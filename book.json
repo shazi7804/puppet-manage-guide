@@ -3,6 +3,7 @@
   "description": "提供給想要入手 Puppet 的管理者，帶你進入 Puppet 的自動化世界。", 
   "language": "zh-tw",
   "plugins": [
+    "ga",
     "github",
     "page-toc-button"
   ],
