@@ -24,5 +24,5 @@ Puppet Master 和 Agent 是使用 CA 憑證來產生 SSL Cert 進行溝通
 
 
 
-[^1]: SSL configuration: External CA support
+[^1]: https://docs.puppet.com/puppet/5.1/config_ssl_external_ca.html
 
