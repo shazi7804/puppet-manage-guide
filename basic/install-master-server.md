@@ -100,8 +100,6 @@
   $ sudo ufw allow 8140
   ```
 
-這樣就完成 Puppet master 的安裝。
-
 [puppet-platform]: https://docs.puppet.com/puppet/5.1/puppet_platform.html
 
 [puppet-conf]: https://docs.puppet.com/puppet/5.0/configuration.html
