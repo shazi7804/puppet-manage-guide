@@ -9,7 +9,7 @@
 
 Role and Profile 有幾個要點：
 
-  - 使用 Normal module。
+  - 使用大量 Normal module。
   - Profile 由很多 Normal module 組成。
   - Role 由很多 Profile module 組成。
   - 一個 node 只擁有一個 Role。
