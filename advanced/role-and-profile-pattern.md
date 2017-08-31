@@ -41,6 +41,7 @@ class profile::apache2::php {
 
 ```puppet
 class role::webserver {
+  include profile::base
   include profile::user
   include profile::apache2::php
 }
