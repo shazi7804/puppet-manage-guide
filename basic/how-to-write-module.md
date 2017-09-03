@@ -131,6 +131,7 @@ node default {
   include ::apache
 }
 ```
+只要三行、三行、三行 !! 就完成佈署安裝 apache 了
 
 這樣 Puppet code 就簡潔許多了，恭喜你已經學會了基本的 module 寫法，可以再往進階 module 前進。
 
