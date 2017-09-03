@@ -53,7 +53,7 @@ Module 是 Puppet 管理中非常重要的一環，利用已經編寫好的 modu
 
 以一個 apache module 為例，我會需要產生以下這些檔案結構
 
-```
+```shell
 $ tree /etc/puppetlabs/code/modules/apache
 ├── files
 |   └── default.conf
@@ -69,7 +69,6 @@ $ tree /etc/puppetlabs/code/modules/apache
 init.pp 是預設被讀取的檔案，通常用來定義變數、引用 class。
 
 ```puppet
-# apache/manifests/init.pp
 class apache (
   String $package_name      = 'apache2',
   String $package_ensure    = 'installed',
