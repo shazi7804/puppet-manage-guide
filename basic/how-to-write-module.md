@@ -74,7 +74,7 @@ class apache (
   String $package_ensure    = 'installed',
   String $service_name      = 'apache2',
   String $service_ensure    = 'running',
-  String $default_site_conf = '/etc/apache2/sitesenabled/default.conf',
+  String $default_site_conf = '/etc/apache2/sites-enabled/default.conf',
   String $run_user          = 'www-data',
 ){
   contain apache::install
