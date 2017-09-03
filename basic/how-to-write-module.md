@@ -20,15 +20,15 @@ Module 是 Puppet 管理中非常重要的一環，利用已經編寫好的 modu
 
 - Puppet 官方維護的 Puppetlabs
 
-  - [Puppetlabs][puppetlabs] 是官方提供的模組，不見得會是最新，但是會是最穩定的 module，基本上沒有太多問題，而且也沒有 EOL 的問題，而且 Test case 也算是最完整的。
+[Puppetlabs][puppetlabs] 是官方提供的模組，不見得會是最新，但是會是最穩定的 module，基本上沒有太多問題，而且也沒有 EOL 的問題，而且 Test case 也算是最完整的。
 
 - Github 維護的 voxpupuli
 
-  - [voxpupuli][voxpupuli] 是由 Github 內部維護的 module，也算是穩定中可選的 module，有許多由 Puppetlabs 官方維護的 module 會直接移轉給 voxpupuli 進行維護，例如 [puppet-nginx][puppet-nginx]，算是除了 Puppetlabs 的第三方授權。
+[voxpupuli][voxpupuli] 是由 Github 內部維護的 module，也算是穩定中可選的 module，有許多由 Puppetlabs 官方維護的 module 會直接移轉給 voxpupuli 進行維護，例如 [puppet-nginx][puppet-nginx]，算是除了 Puppetlabs 的第三方授權。
 
 - 由套件本身官方維護的 module
 
-  - 各種套件本身會維護自己的 Puppet module，例如 [Elastic][elastic] 就維護 puppet-elasticsearch、puppet-kibana、puppet-logstash
+各種套件本身會維護自己的 Puppet module，例如 [Elastic][elastic] 就維護 puppet-elasticsearch、puppet-kibana、puppet-logstash
 
 ### 適用自己環境
 
