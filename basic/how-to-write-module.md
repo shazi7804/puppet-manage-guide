@@ -123,7 +123,7 @@ class apache::config inherits apache {
 
 ## 怎麼引用 module
 
-要引用 module 只需要使用 include 就可以把已經寫好的 apache module 引用近來
+要引用 module 只需要使用 include 就可以把已經寫好的 apache module 引用進來
 
 ```puppet
 node default {
