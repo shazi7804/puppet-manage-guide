@@ -38,7 +38,7 @@
 
 1. 安裝 Puppet agent
 
-  從官方 [repository][^1] 取得 Puppet package。
+  從官方 repository([apt][apt-repository]/[yum][yum-repository]) 取得 Puppet package。
 
   ```shell
   $ wget https://apt.puppetlabs.com/puppet5-release-xenial.deb
@@ -91,6 +91,8 @@
 當 Puppet master / agent 搞定之後就可以開始寫 manifests(倉儲) 啦 !!
 
 
+[yum-repository]: https://yum.puppetlabs.com/
+[apt-repository]: https://apt.puppetlabs.com/
 [puppet-conf]: https://docs.puppet.com/puppet/5.0/configuration.html
 
 
