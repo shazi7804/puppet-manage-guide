@@ -1,6 +1,6 @@
 # Puppet 從入門就放棄
 
-Puppet 是一個基於實現 infrastructure as a code 的組態管理工具，與其相同性質的有 Ansible、SaltStack、Chef 等工具，Puppet 的特性是幾乎涵蓋所有的 OS System，並且適合在大量佈署的環境下使用。    
+Puppet 是一個基於實現 infrastructure as a code 的組態管理工具，與其相同性質的有 Ansible、SaltStack、Chef 等工具，Puppet 的特性是幾乎涵蓋所有的 OS System，並且適合在大量佈署的環境下使用。
 
 為什麼會說 **從入門就放棄** !? 我是從一個 System manager 的角度去看 Puppet，遇到蠻大多數的 System manager 都是因為不想要 coding 所以才選擇走 System manager 這個職位。
 
@@ -10,7 +10,12 @@ Puppet 是一個基於實現 infrastructure as a code 的組態管理工具，�
 
 ## 勘誤
 
-請來信 _shazi7804 (at) gmail.com_ 或至 [Github][shazi7804/puppet-manage-guide] 推送 Pull Request 和 Issues。
+請來信 _shazi7804 \(at\) gmail.com_ 或至 [Github](https://github.com/shazi7804/puppet-manage-guide) 推送 Pull Request 和 Issues。
+
+## 作者
+
+本書由 [Mr.沙先生][mr.sha] 撰寫，歡迎對於有 Puppet 管理經驗者共同編輯。
+
+[mr.sha]: https://shazi.info
 
 
-[shazi7804/puppet-manage-guide]: https://github.com/shazi7804/puppet-manage-guide
