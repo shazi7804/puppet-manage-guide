@@ -147,7 +147,7 @@ block: >
     wncpgBAeU+vF/bzMD9ZYjblt9WUT]
 ```
 
-你可以有兩種形式寫在 common.eyaml
+你可以有兩種形式寫在 common.eyaml，ENC 代表已加密。
 
 ### 透過 eyaml decrypt 來解密字串或檔案。
 
@@ -159,6 +159,8 @@ users:
     password: >
         DEC::PKCS7[123]!
 ```
+
+解密後會以 DEC 來表示已經被解密，而 123 就是解密後的值。
 
 ### 使用 hiera-eyaml 後的 KEY 管理
 
