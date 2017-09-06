@@ -69,10 +69,10 @@ exec { 'hostname-refresh':
 - 控制 /etc/environment 系統變數。
 ```puppet
 augeas { 'set-environment':
-    lens    => 'Shellvars.lns',
-    incl    => '/etc/environment',
-    changes => template("${module_name}/environment.erb"),
-  }
+  lens    => 'Shellvars.lns',
+  incl    => '/etc/environment',
+  changes => template("${module_name}/environment.erb"),
+}
 ```
 
 [augeas][augeas] 是用來管理所有**系統設定檔**，特性是可以處理**單行**而不影響既有的資料，因為 environment 可能會有許多 application 會共用這隻檔案，所以不適合用 file 來管理，如果用 file 就咬死這隻檔案的彈性了。
