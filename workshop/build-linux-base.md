@@ -87,7 +87,7 @@ file_line { 'sudo_rule-sudo':
 }
 ```
 
-這邊用到 stdlib 的 file_line，其用途跟 augeas 很像，都是用來控制單行不影響既有資料，不過 file_line 可以處理非**系統設定檔。
+這邊用到 stdlib 的 file_line，其用途跟 augeas 很像，都是用來控制單行不影響既有資料，不過 file_line 可以處理非**系統設定檔**。
 
 - 用 module 快速安裝 ntp
 
