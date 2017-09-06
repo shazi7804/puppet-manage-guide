@@ -15,6 +15,7 @@
 - [進階管理](advanced.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
     - [怎麼使用 Hiera data](advanced/how-to-use-hiera-data.md)
+    - [怎麼加密 Hiera data](advanced/how-to-encrypt-hiera-data.md)
     
 - [佈署到其他平台](deploy-to-other.md)
     - [佈署到 Docker](deploy/how-to-build-docker.container.md)
