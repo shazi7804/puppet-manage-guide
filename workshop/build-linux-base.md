@@ -67,6 +67,7 @@ exec { 'hostname-refresh':
 因為必須先設定 /etc/hostname 後才使用 hostname -F 去生效，所以會有順序上的問題，在 [exec][exec] 這邊用 refreshonly 被動的方式等待觸發才會執行，而 [file][file] 有異動的時候會 [notify][notify] Exec['hostname-refresh']。
 
 - 控制 /etc/environment 系統變數。
+
 ```puppet
 augeas { 'set-environment':
   lens    => 'Shellvars.lns',
