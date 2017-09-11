@@ -11,6 +11,7 @@
         - [實作 policy-based autosigning](basic/auth/how-to-policy-based-autoscaling.md)
     - [第一個 manifests 設定](basic/how-to-write-manifests.md)
     - [第一個 module 設定](basic/how-to-write-module.md)
+    - [處理 resource 的先後順序](basic/how-to-use-resource-older.md)
 
 - [進階管理](advanced/README.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
