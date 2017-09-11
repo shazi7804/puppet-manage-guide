@@ -59,7 +59,7 @@ service { 'sshd':
 
 ## 箭頭符號
 
-如果是在寫 module，通常在 init.pp 會用 `->` 和 `~>` 來處理 class 的順序
+如果是在寫 module，常用在 init.pp `->` 和 `~>` 來處理 class 的順序
 
 ```puppet
 class nginx (){
@@ -72,6 +72,13 @@ class nginx (){
   ~> Class['::nginx::service']
 }
 ```
+
+或是直接拿來處理 resource
+
+```puppet
+Package['nginx'] -> File['/etc/nginx/nginx.conf'] ~> Service['nginx']
+```
+
 
 `->` 代表左邊的資源會先應用後，再執行右邊資源。
 
