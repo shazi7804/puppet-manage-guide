@@ -19,6 +19,8 @@
 
 - [WorkShop](workshop/README.md)
     - [實作 Linux 基礎環境設定](workshop/build-linux-base.md)
+    - [實作 LAMP](workshop/build-lamp.md)
+
     
 - [佈署到其他平台](deploy/README.md)
     - [佈署到 Docker](deploy/how-to-build-docker.container.md)
