@@ -43,6 +43,9 @@ profile::base::ntp_server: 'time.stdtime.gov.tw'
 profile::base::ntp_server: 'time.google.com'
 ```
 
+按照上面的範例，common.yaml 和 web.puppet.com.yaml 都擁有 ntp_server，但是依照 hiera 的讀取順序，在 web.puppet.com.yaml 就取到了，所以 common.yaml 的 ntp_server 就被丟掉了。
+
+
 這是因為在 Hiera 是按照 facts 讀到的 **第一個** 數據，讀取的順序：
 
   - data/nodes/web.puppet.com.yaml
@@ -50,8 +53,6 @@ profile::base::ntp_server: 'time.google.com'
   - data/groups/ops.yaml
   - data/os/RedHat.yaml
   - data/common.yaml
-
-所以按照上面的範例，common.yaml 和 web.puppet.com.yaml 都擁有 ntp_server，但是依照 hiera 的讀取順序，在 web.puppet.com.yaml 就取到了，所以 common.yaml 的 ntp_server 就被丟掉了。
 
 除了 facts 的讀取順序以外，在 Hiera 5 之後還支援了 three config layers 的架構：
 

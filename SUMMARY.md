@@ -12,10 +12,10 @@
     - [第一個 manifests 設定](basic/how-to-write-manifests.md)
     - [第一個 module 設定](basic/how-to-write-module.md)
     - [處理 resource 的先後順序](basic/how-to-use-resource-older.md)
+    - [怎麼使用 Hiera data](basic/how-to-use-hiera-data.md)
 
 - [進階管理](advanced/README.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
-    - [怎麼使用 Hiera data](advanced/how-to-use-hiera-data.md)
     - [怎麼加密 Hiera data](advanced/how-to-encrypt-hiera-data.md)
 
 - [WorkShop](workshop/README.md)
