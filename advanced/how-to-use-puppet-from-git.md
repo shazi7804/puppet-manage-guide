@@ -2,9 +2,14 @@
 
 ## 為什麼要用 Git
 
-Puppet 有個很大的特點是 Infrastructure as code
+Puppet 有個很大的特點是 Infrastructure as code，既然是 Code 就能進版控管理，這樣你所有的 Config 就不是單純的寫設定檔，你還能享有所有程式開發在 Git 的好處，例如：
 
-
+- 修改歷程被記錄，不用擔心找不到修改設定的人是誰。
+- 可被測試，既然是 Code 就可以進 CI 跑 Test case。
+- 可同時管理多環境，因為你可以有 branch 的概念。
+- 不用人人都是 admin，你可以用 Pull request 的管理方法來限制某些人才能佈署環境
+- 環境一致性，你可以輕易的複製環境，deploy 到另一個環境。
+- 不用擔心多台主機 sync 的問題，因為你的 CI / CD 可以做到 Rolling update 或 Blue/Green deployment。
 
 
 ## 怎麼用 Git 管理 Puppet
@@ -16,7 +21,6 @@ Puppet 有個很大的特點是 Infrastructure as code
 會寫 Puppet 是一個重點，另一個重點是怎麼讓你的 Project 讓人看的懂，通常一間好的公司 Infrastructure 的管理者至少會 N+1 人，這時候你就會面臨到多人管理的議題，一個好的 skeleton 和 flow 都會增加維護者的工作效率。
 
 在現行的 Puppet 版本(5)中，最好的入口點是 `/etc/puppetlabs/code`，這一層位置包含了 environments、modules 和 hiera-data，當然你也可以規劃好自己的架構，然後 CD 才把檔案丟到相對的位置。
-
 
 如果還是對怎麼用 Git 管理 Puppet 沒有頭緒的話，可以參考我正在使用的 Puppet skeleton。
 
@@ -52,11 +56,7 @@ puppet
 - Packer 用於 deploy 其他環境，如 Docker、AWS。
 - make 自動化工具
 
-
-
-
-
-
+這個 skeleton 會按照你的需求跟環境有所增長，不一定適合所有人，但可以給還沒有讓 Puppet 進 Git 管理的人一個方向。
 
 
 
