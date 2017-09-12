@@ -44,10 +44,15 @@ puppet
 
 在這個 skeleton 下有幾個管理重點：
 
-- Role and Profile patt
+- Role and Profile pattern
+- Private module 另外拉到第一層
 - 用 Puppetfile 管理 modules
-- Puppet 會進行 Test case。
-- 
+- environments 管理所有環境 (dev、staging、production)
+- Test case。
+- Packer 用於 deploy 其他環境，如 Docker、AWS。
+- make 自動化工具
+
+
 
 
 
