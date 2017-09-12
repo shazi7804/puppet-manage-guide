@@ -17,12 +17,12 @@
 - [進階管理](advanced/README.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
     - [怎麼加密 Hiera data](advanced/how-to-encrypt-hiera-data.md)
+    - [讓 Puppet 進 git 版控](advanced/how-to-use-puppet-from-puppet.md)
 
 - [WorkShop](workshop/README.md)
     - [實作 Linux 基礎環境設定](workshop/build-linux-base.md)
     - [實作 LAMP](workshop/build-lamp.md)
 
-    
 - [佈署到其他平台](deploy/README.md)
     - [佈署到 Docker](deploy/how-to-build-docker.container.md)
     - [佈署到 AWS AMI](deploy/how-to-build-docker.container.md)
