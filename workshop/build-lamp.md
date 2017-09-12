@@ -4,6 +4,8 @@ LAMP 是最常用到的 Web Server 架構之一，用 Puppet 來實作這種常�
 
 ## 學習項目
 
+- resource
+  - package
 - data type
   - Array
 - puppet file
