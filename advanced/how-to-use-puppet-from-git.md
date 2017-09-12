@@ -7,6 +7,17 @@ Puppet 有個很大的特點是 Infrastructure as code
 
 
 
+## 怎麼用 Git 管理 Puppet
+
+阿不是就把 Puppet 設定檔都丟上 Git 嗎 ?
+
+事實是這樣沒錯 .. XDD
+
+會寫 Puppet 是一個重點，另一個重點是怎麼讓你的 Project 讓人看的懂，通常一間好的公司 Infrastructure 的管理者至少會 N+1 人，這時候你就會面臨到多人管理的議題，一個好的 skeleton 和 flow 都會增加維護者的工作效率。
+
+在現行的 Puppet 版本(5)中
+
+
 如果還是對怎麼用 Git 管理 Puppet 沒有頭緒的話，可以參考我正在使用的 Puppet skeleton。
 
 ```
