@@ -42,4 +42,16 @@ puppet
 └── spec              # Test case.
 ```
 
-從這個 Puppet skeleton 下
+在這個 skeleton 下有幾個管理重點：
+
+- Role and Profile patt
+- 用 Puppetfile 管理 modules
+- Puppet 會進行 Test case。
+- 
+
+
+
+
+
+
+
