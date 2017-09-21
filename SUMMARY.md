@@ -18,6 +18,7 @@
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
     - [怎麼加密 Hiera data](advanced/how-to-encrypt-hiera-data.md)
     - [讓 Puppet 進 git 版控](advanced/how-to-use-puppet-from-git.md)
+    - [備份與還原](advanced/backup-and-restore.md)
 
 - [WorkShop](workshop/README.md)
     - [實作 Linux 基礎環境設定](workshop/build-linux-base.md)
