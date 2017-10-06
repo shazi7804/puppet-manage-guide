@@ -1,6 +1,6 @@
 # 實作 Nginx and NodeJS
 
-Nginx 和 NodeJS 也是在實務上場遇到的
+Nginx 和 NodeJS 也是在實務上常遇到的，面對這樣的常用的項目，我會讓他盡可能的彈性，透過不同的參數實現不同的設定，那麼 hiera 就是必會的功能。
 
 ## 學習項目
 
