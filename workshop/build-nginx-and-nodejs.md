@@ -100,7 +100,7 @@ class profile::nginx::nodejs (
 }
 ```
 
-最後用 hiera 把參數補上
+最後用 [hiera](basic/how-to-use-hiera-data.md) 把參數補上。
 
 ```yaml
 profile::nginx::worker_connections: 4096
@@ -121,7 +121,7 @@ profile::nginx::nodejs::upstream_members:
 profile::nginx::nodejs::full_http_proxy: ~
 ```
 
-
+從這個範例會安裝 Nginx 並且 Proxy 8080 port，nvm 則會安裝 nodejs 6 的版本。
 
 
 
