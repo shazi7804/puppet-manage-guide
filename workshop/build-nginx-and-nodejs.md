@@ -5,7 +5,11 @@ Nginx 和 NodeJS 也是在實務上場遇到的
 ## 學習項目
 
 - hiera
-- puppet file
+- class include
+- resource
+  - file
+- if/else
+- data type
 
 ## 實作目標
 
