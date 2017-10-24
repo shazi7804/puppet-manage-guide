@@ -53,6 +53,8 @@ ensure => directory,
 
 ## 情境範例：
 
+- 用 default 來處理差不多的 resource
+
 在實際管理的時候一定會遇到要同時處理很多 file，但是彼此又很像，只有一點點差異，那麼就可以利用 `default` 一次處理多個差不多的 resoure。
 
 ```puppet
@@ -71,7 +73,7 @@ file {
 }
 ```
 
-
+這樣就一次搞定 hosts.allow 和 hosts.deny 這兩個檔案。
 
 
 
