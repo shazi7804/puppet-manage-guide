@@ -14,6 +14,8 @@
     - [處理 resource 的先後順序](basic/how-to-use-resource-older.md)
     - [怎麼使用 Hiera data](basic/how-to-use-hiera-data.md)
 
+- [Resource 特別介紹篇](resource/README.md)
+
 - [進階管理](advanced/README.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
     - [怎麼加密 Hiera data](advanced/how-to-encrypt-hiera-data.md)
