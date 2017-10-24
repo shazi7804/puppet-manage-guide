@@ -85,6 +85,8 @@ file {
 
 這樣就一次搞定 hosts.allow 和 hosts.deny 這兩個檔案。
 
+file 多數用在你想 `完全掌控` 檔案或目錄的情況下使用，如果你只想針對內容的某一段修改，則應該使用 augeas 或是 file_line
+
 
 
 
