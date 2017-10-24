@@ -51,6 +51,16 @@ file { $sample_dirs:
 }
 ```
 
+- 處理檔案符號連結 (symlink)
+
+```puppet
+file { '/tmp/link-to-motd':
+  ensure => link,
+  target => '/etc/motd', 
+}
+```
+
+
 ## 情境範例：
 
 - 用 default 來處理差不多的 resource
