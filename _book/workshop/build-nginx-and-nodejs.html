@@ -1,0 +1,730 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>實作 Nginx 和 Nodejs · Puppet 管理者指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../test/" />
+    
+    
+    <link rel="prev" href="build-lamp.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../intro/">
+            
+                <a href="../intro/">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../intro/what-is-puppet.html">
+            
+                <a href="../intro/what-is-puppet.html">
+            
+                    
+                    什麼是 Puppet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../intro/why-use-puppet.html">
+            
+                <a href="../intro/why-use-puppet.html">
+            
+                    
+                    為什麼要用 Puppet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basic/">
+            
+                <a href="../basic/">
+            
+                    
+                    基礎概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic/install-master-server.html">
+            
+                <a href="../basic/install-master-server.html">
+            
+                    
+                    安裝 Master Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basic/install-puppet-agent.html">
+            
+                <a href="../basic/install-puppet-agent.html">
+            
+                    
+                    安裝 Puppet Agent 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basic/how-to-master-and-agent-auth.html">
+            
+                <a href="../basic/how-to-master-and-agent-auth.html">
+            
+                    
+                    Master 和 Agent 的認證關係
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../basic/auth/how-to-policy-based-autoscaling.html">
+            
+                <a href="../basic/auth/how-to-policy-based-autoscaling.html">
+            
+                    
+                    實作 policy-based autosigning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../basic/how-to-write-manifests.html">
+            
+                <a href="../basic/how-to-write-manifests.html">
+            
+                    
+                    第一個 manifests 設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../basic/how-to-write-module.html">
+            
+                <a href="../basic/how-to-write-module.html">
+            
+                    
+                    第一個 module 設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../basic/how-to-use-resource-older.html">
+            
+                <a href="../basic/how-to-use-resource-older.html">
+            
+                    
+                    處理 resource 的先後順序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../basic/how-to-use-hiera-data.html">
+            
+                <a href="../basic/how-to-use-hiera-data.html">
+            
+                    
+                    怎麼使用 Hiera data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../advanced/">
+            
+                <a href="../advanced/">
+            
+                    
+                    進階管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../advanced/role-and-profile-pattern.html">
+            
+                <a href="../advanced/role-and-profile-pattern.html">
+            
+                    
+                    Role and Profile pattern 的管理方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../advanced/how-to-encrypt-hiera-data.html">
+            
+                <a href="../advanced/how-to-encrypt-hiera-data.html">
+            
+                    
+                    怎麼加密 Hiera data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../advanced/how-to-use-puppet-from-git.html">
+            
+                <a href="../advanced/how-to-use-puppet-from-git.html">
+            
+                    
+                    讓 Puppet 進 git 版控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../advanced/backup-and-restore.html">
+            
+                <a href="../advanced/backup-and-restore.html">
+            
+                    
+                    備份與還原
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    WorkShop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="build-linux-base.html">
+            
+                <a href="build-linux-base.html">
+            
+                    
+                    實作 Linux 基礎環境設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="build-lamp.html">
+            
+                <a href="build-lamp.html">
+            
+                    
+                    實作 LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="build-nginx-and-nodejs.html">
+            
+                <a href="build-nginx-and-nodejs.html">
+            
+                    
+                    實作 Nginx 和 Nodejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../test/">
+            
+                <a href="../test/">
+            
+                    
+                    測試
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../deploy/">
+            
+                <a href="../deploy/">
+            
+                    
+                    佈署到其他平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../deploy/how-to-build-docker.container.html">
+            
+                <a href="../deploy/how-to-build-docker.container.html">
+            
+                    
+                    佈署到 Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../deploy/how-to-build-docker.container.html">
+            
+                <a href="../deploy/how-to-build-docker.container.html">
+            
+                    
+                    佈署到 AWS AMI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >實作 Nginx 和 Nodejs</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5BE6;&#x4F5C;-nginx-and-nodejs">&#x5BE6;&#x4F5C; Nginx and NodeJS</h1>
+<p>Nginx &#x548C; NodeJS &#x4E5F;&#x662F;&#x5728;&#x5BE6;&#x52D9;&#x4E0A;&#x5E38;&#x9047;&#x5230;&#x7684;&#xFF0C;&#x9762;&#x5C0D;&#x9019;&#x6A23;&#x7684;&#x5E38;&#x7528;&#x7684;&#x9805;&#x76EE;&#xFF0C;&#x6211;&#x6703;&#x8B93;&#x4ED6;&#x76E1;&#x53EF;&#x80FD;&#x7684;&#x5F48;&#x6027;&#xFF0C;&#x900F;&#x904E;&#x4E0D;&#x540C;&#x7684;&#x53C3;&#x6578;&#x5BE6;&#x73FE;&#x4E0D;&#x540C;&#x7684;&#x8A2D;&#x5B9A;&#xFF0C;&#x90A3;&#x9EBC; hiera &#x5C31;&#x662F;&#x5FC5;&#x6703;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x5B78;&#x7FD2;&#x9805;&#x76EE;">&#x5B78;&#x7FD2;&#x9805;&#x76EE;</h2>
+<ul>
+<li>hiera</li>
+<li>class include</li>
+<li>resource<ul>
+<li>file</li>
+</ul>
+</li>
+<li>if/else</li>
+<li>data type</li>
+</ul>
+<h2 id="&#x5BE6;&#x4F5C;&#x76EE;&#x6A19;">&#x5BE6;&#x4F5C;&#x76EE;&#x6A19;</h2>
+<ul>
+<li>Nginx (Reverse Proxy)</li>
+<li>nvm</li>
+</ul>
+<h2 id="dependencies">Dependencies</h2>
+<p>&#x5728;&#x9019;&#x500B; workshop &#x6703;&#x9700;&#x8981;&#x7528;&#x5230;&#x4EE5;&#x4E0B; module</p>
+<ul>
+<li>puppet-nginx (Vox Pupuli)</li>
+<li>corp104-nvm (104corp)</li>
+</ul>
+<h2 id="lab-start">LAB Start</h2>
+<p>&#x9019;&#x500B; LAB &#x6703;&#x5BE6;&#x4F5C;&#x5230; hiera&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x5FC5;&#x9808;&#x628A;&#x6240;&#x6709;&#x53EF;&#x52D5;&#x7684;&#x53C3;&#x6578;&#x90FD;&#x62C9;&#x51FA;&#x4F86;&#x53BB;&#x53C3;&#x8003; hiera &#x7684; data</p>
+<h2 id="nginx">Nginx</h2>
+<p>&#x76F4;&#x63A5;&#x4F7F;&#x7528; Github &#x7684; nginx &#x6A21;&#x7D44;&#x4F86;&#x5B89;&#x88DD; nginx&#x3002;</p>
+<pre><code class="lang-puppet"><span class="hljs-keyword">class</span> <span class="hljs-title">profile::nginx</span> (
+  <span class="hljs-title">Integer</span> $<span class="hljs-title">worker_connections</span>,
+  <span class="hljs-title">Integer</span> $<span class="hljs-title">worker_rlimit_nofile</span>,
+  <span class="hljs-title">String</span> $<span class="hljs-title">server_tokens</span>,
+  <span class="hljs-title">Array</span> $<span class="hljs-title">proxy_set_header</span>,
+  <span class="hljs-title">String</span> $<span class="hljs-title">gzip</span>,
+  <span class="hljs-title">String</span> $<span class="hljs-title">gzip_types</span>,
+  <span class="hljs-title">Integer</span> $<span class="hljs-title">gzip_comp_level</span>,
+){
+  <span class="hljs-keyword">class</span> { <span class="hljs-string">&apos;nginx&apos;</span>:
+    server_tokens        =&gt; <span class="hljs-variable">$server_tokens</span>,
+    worker_connections   =&gt; <span class="hljs-variable">$worker_connections</span>,
+    worker_rlimit_nofile =&gt; <span class="hljs-variable">$worker_rlimit_nofile</span>,
+    proxy_set_header     =&gt; <span class="hljs-variable">$proxy_set_header</span>,
+    gzip                 =&gt; <span class="hljs-variable">$gzip</span>,
+    gzip_types           =&gt; <span class="hljs-variable">$gzip_types</span>,
+    gzip_comp_level      =&gt; <span class="hljs-variable">$gzip_comp_level</span>,
+  }
+}
+</code></pre>
+<p>&#x5728; nginx &#x9019;&#x908A;&#x6211;&#x50C5;&#x5B9A;&#x7FA9;&#x7C21;&#x55AE;&#x7684; nginx global &#x8A2D;&#x5B9A;&#xFF0C;Proxy &#x7684;&#x8A2D;&#x5B9A;&#x5BEB;&#x5728; nodejs &#x9019;&#x500B; class&#x3002;</p>
+<h2 id="nodejs">nodejs</h2>
+<p>&#x5728; nodejs &#x53BB; include nginx&#xFF0C;&#x8003;&#x616E;&#x5230; nvm &#x7684;&#x5B89;&#x88DD;&#x8981;&#x5230; internet &#x6709;&#x53EF;&#x80FD;&#x8981;&#x900F;&#x904E; Proxy&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x52A0;&#x5165; Proxy &#x7684;&#x5224;&#x65B7;&#x3002;</p>
+<pre><code class="lang-puppet"><span class="hljs-keyword">class</span> <span class="hljs-title">profile::nginx::nodejs</span> (
+  <span class="hljs-title">String</span> $<span class="hljs-title">node_version</span>,
+  <span class="hljs-title">Optional</span>[<span class="hljs-title">String</span>] $<span class="hljs-title">full_http_proxy</span>,
+  <span class="hljs-title">Array</span> $<span class="hljs-title">upstream_members</span>,
+){
+  include profile::nginx
+
+  <span class="hljs-comment"># generate nginx resource</span>
+  nginx::resource::<span class="hljs-keyword">upstream</span> { <span class="hljs-string">&quot;puppet-${::fqdn}&quot;</span>:
+    <span class="hljs-attr">members</span> =&gt; <span class="hljs-variable">$upstream_members</span>,
+  }
+  <span class="hljs-keyword">nginx</span>::resource::<span class="hljs-keyword">server</span> { <span class="hljs-variable">$::fqdn</span>:
+    <span class="hljs-attr">proxy</span> =&gt; <span class="hljs-string">&quot;http://puppet-${::fqdn}&quot;</span>,
+  }
+
+  <span class="hljs-keyword">file</span> {
+    <span class="hljs-keyword">default</span>:
+      <span class="hljs-attr">ensure</span>  =&gt; <span class="hljs-literal">absent</span>,
+      <span class="hljs-attr">require</span> =&gt; Package[<span class="hljs-string">&apos;nginx&apos;</span>],
+      <span class="hljs-attr">notify</span>  =&gt; Service[<span class="hljs-string">&apos;nginx&apos;</span>],
+    ;
+    <span class="hljs-string">&apos;default-conf&apos;</span>:
+      <span class="hljs-attr">path</span> =&gt; <span class="hljs-string">&apos;/etc/nginx/conf.d/default.conf&apos;</span>,
+    ;
+    <span class="hljs-string">&apos;default-site-conf&apos;</span>:
+      <span class="hljs-attr">path</span> =&gt; <span class="hljs-string">&apos;/etc/nginx/sites-enabled/default&apos;</span>,
+    ;
+  }
+
+  # include nvm module
+  if <span class="hljs-variable">$full_http_proxy</span> {
+    <span class="hljs-keyword">class</span> { <span class="hljs-string">&apos;corp104_nvm&apos;</span>:
+      node_version =&gt; <span class="hljs-variable">$node_version</span>,
+      http_proxy   =&gt; <span class="hljs-variable">$full_http_proxy</span>,
+    }
+  }
+  <span class="hljs-keyword">else</span> {
+    class { <span class="hljs-string">&apos;corp104_nvm&apos;</span>:
+      <span class="hljs-attr">node_version</span> =&gt; <span class="hljs-variable">$node_version</span>,
+    }
+  }
+}
+</code></pre>
+<p>&#x6700;&#x5F8C;&#x7528; <a href="basic/how-to-use-hiera-data.md">hiera</a> &#x628A;&#x53C3;&#x6578;&#x88DC;&#x4E0A;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">profile:</span>:nginx::worker_connections: <span class="hljs-number">4096</span>
+<span class="hljs-attr">profile:</span>:nginx::worker_rlimit_nofile: <span class="hljs-number">204800</span>
+<span class="hljs-attr">profile:</span>:nginx::server_tokens: <span class="hljs-string">&apos;off&apos;</span>
+<span class="hljs-attr">profile:</span>:nginx::proxy_set_header:
+<span class="hljs-bullet">  -</span> <span class="hljs-string">&apos;Host $host&apos;</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">&apos;X-Real-IP $remote_addr&apos;</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">&apos;X-Forwarded-For $proxy_add_x_forwarded_for&apos;</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">&apos;X-Forwarded-Proto $scheme&apos;</span>
+<span class="hljs-attr">profile:</span>:nginx::stub_status: <span class="hljs-literal">true</span>
+<span class="hljs-attr">profile:</span>:nginx::gzip: <span class="hljs-string">&apos;on&apos;</span>
+<span class="hljs-attr">profile:</span>:nginx::gzip_types: <span class="hljs-string">&apos;text/plain text/css text/xml text/javascript application/json application/x-javascript application/javascript application/xml&apos;</span>
+<span class="hljs-attr">profile:</span>:nginx::gzip_comp_level: <span class="hljs-number">6</span>
+<span class="hljs-attr">profile:</span>:nginx::nodejs::node_version: <span class="hljs-string">&apos;6&apos;</span>
+<span class="hljs-attr">profile:</span>:nginx::nodejs::upstream_members:
+<span class="hljs-bullet">  -</span> <span class="hljs-string">&apos;localhost:8080&apos;</span>
+<span class="hljs-attr">profile:</span>:nginx::nodejs::full_http_proxy: ~
+</code></pre>
+<p>&#x5F9E;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x6703;&#x5B89;&#x88DD; Nginx &#x4E26;&#x4E14; Proxy 8080 port&#xFF0C;nvm &#x5247;&#x6703;&#x5B89;&#x88DD; nodejs 6 &#x7684;&#x7248;&#x672C;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="build-lamp.html" class="navigation navigation-prev " aria-label="Previous page: 實作 LAMP">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../test/" class="navigation navigation-next " aria-label="Next page: 測試">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"實作 Nginx 和 Nodejs","level":"1.5.3","depth":2,"next":{"title":"測試","level":"2.1","depth":1,"path":"test/README.md","ref":"test/README.md","articles":[]},"previous":{"title":"實作 LAMP","level":"1.5.2","depth":2,"path":"workshop/build-lamp.md","ref":"workshop/build-lamp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga","github","page-toc-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/shazi7804/puppet-manage-guide"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"ga":{"configuration":"auto","token":"UA-50267306-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Puppet 管理者指南","language":"zh-tw","gitbook":"*","description":"提供給想要入手 Puppet 的管理者，帶你進入 Puppet 的自動化世界。"},"file":{"path":"workshop/build-nginx-and-nodejs.md","mtime":"2017-10-06T02:44:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-18T06:53:32.159Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
