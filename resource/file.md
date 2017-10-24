@@ -32,3 +32,62 @@ $ ll /tmp/bar
 -rw-r--r-- 1 root root 13 Oct 24 11:45 bar
 ```
 
+- 建立樹狀結構目錄
+
+在 Linux 你可以用 `mkdir -p` 搞定，但是 Puppet 你要一層一層建立，就像這樣：
+
+```puppet
+file { ['/tmp/bar', '/tmp/bar/foo']:
+  ensure => directory,
+}
+```
+
+或是用變數：
+
+```puppet
+$sample_dirs = ['/tmp/bar', '/tmp/bar/foo']
+file { $sample_dirs:
+ensure => directory,
+}
+```
+
+## 情境範例：
+
+在實際管理的時候一定會遇到要同時處理很多 file，但是彼此又很像，只有一點點差異，那麼就可以利用 `default` 一次處理多個差不多的 resoure。
+
+```puppet
+file {
+  default:
+    ensure => file,
+    mode   => '0644',
+    owner  => 'root',
+    group  => 'root',
+  ;
+  '/etc/hosts.allow':
+    content => 'sshd:192.168.1.10',
+  ;
+  '/etc/hosts.deny':
+    content => 'sshd:all:deny',
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
