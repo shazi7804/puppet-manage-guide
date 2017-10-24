@@ -1,1 +1,0 @@
-# 如何使用 Puppet 佈署 Docker
