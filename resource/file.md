@@ -47,7 +47,7 @@ file { ['/tmp/bar', '/tmp/bar/foo']:
 ```puppet
 $sample_dirs = ['/tmp/bar', '/tmp/bar/foo']
 file { $sample_dirs:
-ensure => directory,
+  ensure => directory,
 }
 ```
 
