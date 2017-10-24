@@ -15,6 +15,7 @@
     - [怎麼使用 Hiera data](basic/how-to-use-hiera-data.md)
 
 - [Resource 特別介紹篇](resource/README.md)
+    - [file 檔案與目錄](resource/file.md)
 
 - [進階管理](advanced/README.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
