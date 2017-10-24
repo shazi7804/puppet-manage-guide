@@ -114,7 +114,7 @@ profile::nginx::proxy_set_header:
   - 'Host $host'
   - 'X-Real-IP $remote_addr'
   - 'X-Forwarded-For $proxy_add_x_forwarded_for'
-  - 'X-Forwarded-Proto $scheme'
+  - 'X-Forwarded-Proto $http_x_forwarded_proto'
 profile::nginx::stub_status: true
 profile::nginx::gzip: 'on'
 profile::nginx::gzip_types: 'text/plain text/css text/xml text/javascript application/json application/x-javascript application/javascript application/xml'
