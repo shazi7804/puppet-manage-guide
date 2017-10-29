@@ -16,6 +16,7 @@
 
 - [Resource 特別介紹篇](resource/README.md)
     - [file 檔案與目錄](resource/file.md)
+    - [package 安裝套件][resource/package.md]
 
 - [進階管理](advanced/README.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
