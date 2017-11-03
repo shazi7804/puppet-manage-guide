@@ -4,6 +4,8 @@
 
 ## 憑證信任篇
 
+
+
 ## 效能篇
 
 - **我的 Puppet Server 平時都運作很正常，但是偶爾會有零星的 Puppet agent 出現錯誤「SSL_connect returned=1 errno=0 state=unknown state: sslv3 alert certificate unknown」，這是什麼狀況？**
