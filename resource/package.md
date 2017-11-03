@@ -12,8 +12,9 @@ package { 'apache2':
 }
 ```
 
+如果在 Ubuntu 的環境就等同於 `apt-get install apache2`。
 
-
+或是想要安裝特別版本
 
 
 
