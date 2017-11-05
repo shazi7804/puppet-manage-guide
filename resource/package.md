@@ -12,7 +12,7 @@ package { 'apache2':
 }
 ```
 
-如果在 Ubuntu 的環境就等同於 `apt-get install apache2`。
+> 等同於 `apt-get install apache2`。
 
 或是想要安裝特別版本的話可以用 `ensure` 來指定版本：
 
@@ -22,6 +22,6 @@ package { 'apache2':
 }
 ```
 
-這樣相當於你執行 `sudo apt-get install package=2.4.18-2ubuntu3.5` 命令。
+> 等同於 `sudo apt-get install package=2.4.18-2ubuntu3.5`
 
 [package-provider]: https://puppet.com/docs/puppet/5.3/types/package.html#package-attribute-provider
