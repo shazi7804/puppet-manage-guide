@@ -14,7 +14,12 @@ package { 'apache2':
 
 如果在 Ubuntu 的環境就等同於 `apt-get install apache2`。
 
-或是想要安裝特別版本
+或是想要安裝特別版本的話可以用 `ensure` 來指定版本：
+
+```puppet
+package { 'apache2': 
+  ensure => '2.4.18-2ubuntu3.5',
+}
 
 
 
