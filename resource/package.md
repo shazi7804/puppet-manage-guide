@@ -22,6 +22,6 @@ package { 'apache2':
 }
 ```
 
-> 等同於 `sudo apt-get install package=2.4.18-2ubuntu3.5`
+> 等同於 `apt-get install package=2.4.18-2ubuntu3.5`
 
 [package-provider]: https://puppet.com/docs/puppet/5.3/types/package.html#package-attribute-provider
