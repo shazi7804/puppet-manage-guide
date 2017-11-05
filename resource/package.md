@@ -21,6 +21,6 @@ package { 'apache2':
   ensure => '2.4.18-2ubuntu3.5',
 }
 
-
+這樣相當於你執行 `sudo apt-get install package=2.4.18-2ubuntu3.5` 命令。
 
 [package-provider]: https://puppet.com/docs/puppet/5.3/types/package.html#package-attribute-provider
