@@ -20,6 +20,7 @@ package { 'apache2':
 package { 'apache2': 
   ensure => '2.4.18-2ubuntu3.5',
 }
+```
 
 這樣相當於你執行 `sudo apt-get install package=2.4.18-2ubuntu3.5` 命令。
 
