@@ -15,7 +15,8 @@
 
 自動完成的功能讓開發速度大幅提昇 !! 但目前針對 `highlight` 的部份沒有太多顏色
 
-如果你覺得 `highlight` 遠比上述功能還要重要的話，那麼建議可以安裝 [puppet/marcus][puppet-vscode-extension-marcus]
+如果你覺得 `highlight` 遠比上述功能還要重要的話，那麼建議可以安裝 [puppet/marcus][puppet-vscode-extension-marcus]，若是與官方 extension 共用則其中一個會無法使用。
+
 
 [puppet-vscode-extension-marcus]: https://marketplace.visualstudio.com/items?itemName=bitzl.vscode-puppet
 [pdk]: https://puppet.com/blog/develop-modules-faster-new-puppet-development-kit
