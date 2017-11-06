@@ -13,6 +13,12 @@
 
 在 0.x 的 preview 版本中，必須要安裝 `puppet agent`，正式版本則為 [`Puppet Development Kit` (PDK)][pdk]
 
+
+在 MacOS 的環境下按 command + shift + P 可以看到所有 plugin 支援的功能
+
+![vscode-ext-feature-overview](/assets/images/vscode-ext-feature-overview.png)
+
+
 自動完成的功能讓開發速度大幅提昇 !! 但目前針對 `highlight` 的部份沒有太多顏色
 
 如果你覺得 `highlight` 遠比上述功能還要重要的話，那麼建議可以安裝 [puppet/marcus][puppet-vscode-extension-marcus]，若是與官方 extension 共用則其中一個會無法使用。
