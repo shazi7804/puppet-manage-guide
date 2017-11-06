@@ -3,7 +3,7 @@
 這邊先說沒有廣告的嫌疑，單純是因為作者用的是 Visual Studio Code 作為 Puppet 的編輯器，所以介紹一下在 Visual Studio Code 上怎麼更快速的開發 Puppet。
 
 
-![puppet-and-vscode](assets/puppet-and-vscode.png)
+![puppet-and-vscode](/assets/images/puppet-and-vscode.png)
 
 我主推在 VSCode 上就有的 Puppet 官方 [extension][puppet-vscode-extension-official]，雖然目前還在 preview 階段 (正式版本為 1.0)，但已經有許多功能支援，包含：
 
