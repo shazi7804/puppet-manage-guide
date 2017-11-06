@@ -20,6 +20,7 @@
     - [service 服務控制](resource/service.md)
 
 - [進階管理](advanced/README.md)
+    - [VSCode plugin for Puppet](advanced/vscode-puppet-plugin.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
     - [怎麼加密 Hiera data](advanced/how-to-encrypt-hiera-data.md)
     - [讓 Puppet 進 git 版控](advanced/how-to-use-puppet-from-git.md)
