@@ -8,6 +8,11 @@
 
 請檢查你的 Puppet Server 中是否有 sign not trust 的狀況。
 
+## 操作篇
+
+- **怎麼刪除在 Puppetdb 裡面 example.com 這台 Node。**
+
+利用 command 執行 `puppet node deactivate example.com` 來注銷 Node。
 
 ## 效能篇
 
