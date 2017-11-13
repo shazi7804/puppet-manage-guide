@@ -1,4 +1,4 @@
-# Ubuntu 16.04 安裝 Puppet agent
+# CentOS 6/7 安裝 Puppet agent
 
 ## 環境
 
