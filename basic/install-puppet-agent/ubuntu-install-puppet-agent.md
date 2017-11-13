@@ -16,7 +16,7 @@
     
     - IP Address: 192.168.10.11
 
-    - Domain : agent.puppet.com
+    - Domain : ubuntu.puppet.com
 
 
 ## 安裝
@@ -26,7 +26,7 @@
   ```shell
   $ cat /etc/hosts
   192.168.10.10 master.puppet.com
-  192.168.10.11 agent.puppet.com
+  192.168.10.11 ubuntu.puppet.com
   ```
 
 1. Puppet agent 必須準確校時。
@@ -53,7 +53,7 @@
   sudo vim /etc/puppetlabs/puppet/puppet.conf
   
   [main]
-    certname = agent.puppet.com
+    certname = ubuntu.puppet.com
     server = master.puppet.com
     environment = dev
     runinterval = 2h  
@@ -65,7 +65,7 @@
 
     - runinterval: 當啟動 puppet daemon 時，會按照設定的時間定時和 master 更新 config，預設為 30m。
     
-1. 在 Puppet master 先 signin agent.puppet.com 這個 node，否則會無法取得 catalog。
+1. 在 Puppet master 先 signin ubuntu.puppet.com 這個 node，否則會無法取得 catalog。
 
   ```shell
   $ /opt/puppetlabs/bin/puppet cert sign agent.puppet.com
