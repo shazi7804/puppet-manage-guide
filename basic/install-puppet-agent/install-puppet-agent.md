@@ -1,4 +1,4 @@
-# 安裝 Puppet agent
+# Ubuntu 16.04 安裝 Puppet agent
 
 ## 環境
 
