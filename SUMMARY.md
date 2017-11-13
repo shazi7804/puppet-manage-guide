@@ -9,7 +9,7 @@
     - [安裝 Master Server](basic/install-master-server.md)
     - 安裝 Puppet Agent
         - [Ubuntu 16.04](basic/install-puppet-agent/ubuntu-install-puppet-agent.md)
-        - [CentOS 6](basic/install-puppet-agent/centos-install-puppet-agent.md)
+        - [CentOS 6/7](basic/install-puppet-agent/centos-install-puppet-agent.md)
 
     - [Master 和 Agent 的認證關係](basic/how-to-master-and-agent-auth.md)
         - [實作 policy-based autosigning](basic/auth/how-to-policy-based-autoscaling.md)
