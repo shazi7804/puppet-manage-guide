@@ -119,13 +119,13 @@ profile::nginx::stub_status: true
 profile::nginx::gzip: 'on'
 profile::nginx::gzip_types: 'text/plain text/css text/xml text/javascript application/json application/x-javascript application/javascript application/xml'
 profile::nginx::gzip_comp_level: 6
-profile::nginx::nodejs::node_version: '6'
+profile::nginx::nodejs::node_version: '8.8.0'
 profile::nginx::nodejs::upstream_members:
   - 'localhost:8080'
 profile::nginx::nodejs::full_http_proxy: ~
 ```
 
-從這個範例會安裝 Nginx 並且 Proxy 8080 port，nvm 則會安裝 nodejs 6 的版本。
+從這個範例會安裝 Nginx 並且 Proxy 8080 port，nvm 則會安裝 nodejs 8.8.0 的版本。
 
 
 
