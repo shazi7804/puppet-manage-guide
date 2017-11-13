@@ -6,6 +6,7 @@
     
 - [基礎概念](basic/README.md)
     - [架構](basic/architecture.md)
+    - [版本大事紀](basic/release-history.md)
     - [安裝 Master Server](basic/install-master-server.md)
     - 安裝 Puppet Agent
         - [Ubuntu 16.04](basic/install-puppet-agent/ubuntu-install-puppet-agent.md)
