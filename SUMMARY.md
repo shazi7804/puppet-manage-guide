@@ -5,6 +5,7 @@
     - [為什麼要用 Puppet](intro/why-use-puppet.md)
     
 - [基礎概念](basic/README.md)
+    - [架構](basic/architecture.md)
     - [安裝 Master Server](basic/install-master-server.md)
     - [安裝 Puppet Agent ](basic/install-puppet-agent.md)
     - [Master 和 Agent 的認證關係](basic/how-to-master-and-agent-auth.md)
