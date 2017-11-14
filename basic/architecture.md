@@ -13,6 +13,8 @@ catalog 是記錄每個受管 Node 的資料，在 Puppet 中又分為兩種：
 
 ## Master / Agent
 
+基於 `pull-based` 的架構
+
 Puppet 的 Master / Agent 架構通常適用於有規模的環境佈署，由 Puppet Master 提供 configuration，在每台要被佈署的 Node 安裝 Puppet agent 向 Master 獲取 configuration。
 
 Puppet Master 通常由 N + 1 台 Puppet Server 構成，必須要能夠承受所有的 Puppet agent 訪問，而 Puppet agent 通常透過 service 運行或是 cron 來定期向 Puppet Master 更新 catalog。
@@ -20,6 +22,8 @@ Puppet Master 通常由 N + 1 台 Puppet Server 構成，必須要能夠承受�
 Agent 透過 catalog 更新完畢後，將 report 回傳給 Puppet Master。
 
 ## Masterless
+
+基於 `push-based` 的架構
 
 無 Master 又稱獨立佈署的架構，透過 `Puppet apply` 進行單機佈署的方式達成。
 
