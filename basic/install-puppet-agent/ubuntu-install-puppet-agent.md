@@ -74,7 +74,7 @@
 1. 再回到 Agent 使用 `puppet agent -t` 來測試和 master 的溝通
 
   ```shell
-  $ /opt/puppetlabs/bin/puppet agent -t
+  $ sudo /opt/puppetlabs/bin/puppet agent -t
   ...
   ...
   Info: Applying configuration version '1503680249'

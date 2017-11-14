@@ -91,7 +91,7 @@
 1. 初始化 Puppet server 的 ca 憑證，如果沒有執行 Agent 會無法透過 ca 來產生 Agent 的 certname。
 
   ```shell
-  $ sudo puppet cert list
+  $ sudo puppet master --verbose --no-daemonize
   ```
 
 1. 如果你有開啟 Firewall 記得 allow 8140
