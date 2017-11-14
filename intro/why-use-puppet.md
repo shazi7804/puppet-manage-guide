@@ -17,9 +17,13 @@
 
 ![puppet-capabilities](/assets/images/capabilities.png)
 
-按照 Puppet 官方說法：全球有 37,000 家企業使用 Puppet 開源專案，其中財富 Top 100 的企業中有 75% 使用 Puppet，由此可以 Puppet 能適用於規模夠大的環境下佈署。 
+按照 Puppet 官方說法：全球有 37,000 家企業使用 Puppet 開源專案，其中財星 Top 100 的企業中有 75% 使用 Puppet，由此可以 Puppet 能適用於規模夠大的環境下佈署。 
 
 ![puppet-fortune-100-use-puppet](/assets/images/fortune-100-use-puppet.png)
 
+
+## Puppet vs. Ansible
+
+"ssh in a for loop is not a solution" – Luke Kanies, Puppet developer
 
 

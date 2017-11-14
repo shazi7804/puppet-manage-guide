@@ -1,6 +1,6 @@
 # 什麼是 Puppet
 
-"ssh in a for loop is not a solution" – Luke Kanies, Puppet developer
+
 
 Puppet 是一個集合所有 Configure 的工具，能夠協助你了解 Infrastructure 的內容與架構，以及在傳統 Data Center 中所有的實體設備進行組態設定，包含虛擬化、和雲的基礎設施，甚至能夠管理你的 Container。
 
