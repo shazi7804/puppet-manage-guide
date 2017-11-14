@@ -26,4 +26,5 @@
 
 "ssh in a for loop is not a solution" – Luke Kanies, Puppet developer
 
+最明顯的差別就是 Ansible 採用的是 ssh 的方式來 `push`，而 Puppet 是依靠 agent 來 `pull`。
 
