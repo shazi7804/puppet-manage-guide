@@ -77,7 +77,7 @@
 1. 嘗試啟動 Puppet master
 
   ```shell
-  $ sudo service puppetserver start
+  $ sudo systemctl start puppetserver
   $ sudo systemctl enable puppetserver
   ```
 
