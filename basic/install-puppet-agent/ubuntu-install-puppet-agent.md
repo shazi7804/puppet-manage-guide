@@ -68,7 +68,7 @@
 1. Puppet agent 產生 certificate
 
   ```shell
-  $ /opt/puppetlabs/bin/puppet agent --test
+  $ sudo /opt/puppetlabs/bin/puppet agent --test
   ```
   
   這個動作會嘗試將 certificate 和 Master 進行 signin。
@@ -76,7 +76,7 @@
 1. 在 Puppet master signin ubuntu.puppet.com 這個 node，否則會無法取得 catalog。
 
   ```shell
-  $ /opt/puppetlabs/bin/puppet cert sign agent.puppet.com
+  $ sudo /opt/puppetlabs/bin/puppet cert sign agent.puppet.com
   ```
     
 1. 回到 Agent 再跑一次 `puppet agent -t` 來測試和 master 的溝通
