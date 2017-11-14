@@ -63,36 +63,45 @@
     - environment: 這台 node 是屬於哪個環境，所以 Puppet master 可以同時管理 dev/staging/production/pre-production 等環境。
 
     - runinterval: 當啟動 puppet daemon 時，會按照設定的時間定時和 master 更新 config，預設為 30m。
-    
-1. 在 Puppet master 先 signin centos.puppet.com 這個 node，否則會無法取得 catalog。
+    1. Puppet agent 產生 certificate
+
+1. Puppet agent 產生 certificate  
 
   ```shell
-  $ /opt/puppetlabs/bin/puppet cert sign centos.puppet.com
-  ```
-    
-1. 再回到 Agent 使用 `puppet agent -t` 來測試和 master 的溝通
+  $ sudo /opt/puppetlabs/bin/puppet agent --test
+  ```  
+
+  這個動作會嘗試將 certificate 和 Master 進行 signin。
+
+1. 在 Puppet master signin ubuntu.puppet.com 這個 node，否則會無法取得 catalog。
 
   ```shell
-  $ /opt/puppetlabs/bin/puppet agent -t
-  ...
-  ...
-  Info: Applying configuration version '1503680250'
+  $ sudo /opt/puppetlabs/bin/puppet cert sign agent.puppet.com
   ```
-  出現 Applying configuration version 代表能成功要到 catalog。
+
+1. 回到 Agent 再跑一次 `puppet agent -t` 來測試和 master 的溝通
+
+  ```shell
+  $ sudo /opt/puppetlabs/bin/puppet agent -t
+  ...  
+  ...
+  Info: Applying configuration version '1503680249'
+  ```
+
+出現 Applying configuration version 代表能成功要到 catalog。
 
 1. 啟動 puppet agent daemon 常駐。
 
   ```shell
   $ sudo systemctl start puppet
   $ sudo systemctl enable puppet
-  ```    
-
+  ```
+  
 當 Puppet master / agent 搞定之後就可以開始寫 manifests(倉儲) 啦 !!
 
 
 [yum-repository]: https://yum.puppetlabs.com/
 [apt-repository]: https://apt.puppetlabs.com/
 [puppet-conf]: https://docs.puppet.com/puppet/5.0/configuration.html
-
 
 

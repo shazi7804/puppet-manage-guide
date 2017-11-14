@@ -65,13 +65,21 @@
 
     - runinterval: 當啟動 puppet daemon 時，會按照設定的時間定時和 master 更新 config，預設為 30m。
     
-1. 在 Puppet master 先 signin ubuntu.puppet.com 這個 node，否則會無法取得 catalog。
+1. Puppet agent 產生 certificate
+
+  ```shell
+  $ /opt/puppetlabs/bin/puppet agent --test
+  ```
+  
+  這個動作會嘗試將 certificate 和 Master 進行 signin。
+  
+1. 在 Puppet master signin ubuntu.puppet.com 這個 node，否則會無法取得 catalog。
 
   ```shell
   $ /opt/puppetlabs/bin/puppet cert sign agent.puppet.com
   ```
     
-1. 再回到 Agent 使用 `puppet agent -t` 來測試和 master 的溝通
+1. 回到 Agent 再跑一次 `puppet agent -t` 來測試和 master 的溝通
 
   ```shell
   $ sudo /opt/puppetlabs/bin/puppet agent -t
