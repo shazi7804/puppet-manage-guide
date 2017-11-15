@@ -1,6 +1,6 @@
 # 第一個 manifests 設定
 
-Puppet 是用 manifests 來管理每一個 node 要做的事情，透過 Catalog 來存放**dependency information** 進行 deploy
+Puppet 是用 manifests 來管理每一個 node 要做的事情，透過 Catalog 來存放 **dependency information** 進行 deploy
 
 ![puppet-catalog](/assets/images/puppet-catalog.png)
 
