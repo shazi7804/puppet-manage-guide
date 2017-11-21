@@ -55,7 +55,7 @@
   [main]
     certname = ubuntu.puppet.com
     server = master.puppet.com
-    environment = dev
+    environment = production
     runinterval = 2h  
   ```
 
