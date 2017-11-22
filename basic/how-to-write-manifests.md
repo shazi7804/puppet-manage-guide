@@ -26,7 +26,7 @@ Master 和 Agent 提交的關係有：
 
 ## 建立 manifests
 
-在建立 manifests 前或許你可以先查看有哪些 [resource][puppet-resource] 能夠使用，在這邊簡單利用 [package][resource-package]、[service][resource-service]、[file][resource-file] 來示範。
+在建立 manifests 前或許你可以先查看有哪些 [resource][resource] 能夠使用，在這邊簡單利用 [package][resource-package]、[service][resource-service]、[file][resource-file] 來示範。
 
 
 ### Example: install chrony
