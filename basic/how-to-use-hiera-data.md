@@ -54,7 +54,7 @@ profile::base::ntp_server: 'time.google.com'
   - data/os/RedHat.yaml
   - data/common.yaml
 
-除了 facts 的讀取順序以外，在 Hiera 5 之後還支援了 three config layers 的架構：
+除了 facts 的讀取順序以外，在 Hiera 5 之後還支援了 three layers 的架構：
 
   - Global ($confdir/hiera.yaml)
   - Environment ($ENVIRONMENT/hiera.yaml)
