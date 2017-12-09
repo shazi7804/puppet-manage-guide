@@ -13,6 +13,8 @@ catalog 是記錄每個受管 Node 的資料，在 Puppet 中又分為兩種：
 
 ## Master / Agent
 
+![puppetmaster-agent](/assets/images/puppetmaster-agent.png)
+
 基於 `pull-based` 的架構
 
 Puppet 的 Master / Agent 架構通常適用於有規模的環境佈署，由 Puppet Master 提供 configuration，在每台要被佈署的 Node 安裝 Puppet agent 向 Master 獲取 configuration。
@@ -36,6 +38,6 @@ Agent 透過 catalog 更新完畢後，將 report 回傳給 Puppet Master。
 
 Puppet tasks and plans 是 puppet 推出基於 `push-based` 的一次性的臨時佈署，與 Ansible 的方式相似，彌補 Puppet 長期以來使用 `pull-based` 必須等待 deploy time 的缺點。
 
-使用 [Bolt](https://github.com/puppetlabs/bolt) 開源專案或是企業版的 Puppet Enterprise Task Management (available in Puppet Enterprise 2017.3)。
+可以使用 [Bolt](https://github.com/puppetlabs/bolt) 開源專案或是企業版的 Puppet Enterprise Task Management (available in Puppet Enterprise 2017.3) 來實現 Tasks and Plans。
 
 [puppet-tasks-and-plans]: https://puppet.com/blog/easily-automate-ad-hoc-work-new-puppet-tasks
