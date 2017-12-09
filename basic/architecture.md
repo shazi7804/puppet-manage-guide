@@ -31,3 +31,11 @@ Agent 透過 catalog 更新完畢後，將 report 回傳給 Puppet Master。
 
 
 一般狀況來說會採用 Master / Agent 的架構使用，但你也可以兩者並用適用不同狀況。
+
+## Tasks and Plans
+
+Puppet tasks and plans 是 puppet 推出基於 `push-based` 的一次性的臨時佈署，與 Ansible 的方式相似，彌補 Puppet 長期以來使用 `pull-based` 必須等待 deploy time 的缺點。
+
+使用 [Bolt](https://github.com/puppetlabs/bolt) 開源專案或是企業版的 Puppet Enterprise Task Management (available in Puppet Enterprise 2017.3)。
+
+[puppet-tasks-and-plans]: https://puppet.com/blog/easily-automate-ad-hoc-work-new-puppet-tasks
