@@ -29,10 +29,7 @@ Agent 透過 catalog 更新完畢後，將 report 回傳給 Puppet Master。
 
 無 Master 又稱獨立佈署的架構，透過 `Puppet apply` 進行單機佈署的方式達成。
 
-通常適用於數量少的環境，或是建立 image 時使用。
-
-
-一般狀況來說會採用 Master / Agent 的架構使用，但你也可以兩者並用適用不同狀況。
+Masterless 很常被應用於 Docker or Vagrant 等 image 環境使用，通常適用於數量少的環境。
 
 ## Tasks and Plans
 
