@@ -70,14 +70,14 @@ Rack Server 是由 Ruby 開發的 Web Service，將 HTTPS 請求重新格式化�
     192.168.10.11 agent.puppet.com
     ```
 
-1. Puppet Master 必須準確校時，Master 和 Agent 誤差超過 5 分鐘則 Puppet 交握失敗。
+1. Puppet Server 必須準確校時，Server 和 Agent 誤差超過 5 分鐘則 Puppet 交握失敗。
 
     ```shell
     $ sudo ntpdate time.stdtime.gov.tw
     $ sudo timedatectl set-timezone Asia/Taipei
     ```
 
-1. 安裝 Puppet Master
+1. 安裝 Puppet Server
 
     從官方 [repository][puppet-platform] 取得 Puppet package。
 
@@ -88,7 +88,7 @@ Rack Server 是由 Ruby 開發的 Web Service，將 HTTPS 請求重新格式化�
     $ sudo apt-get install puppetserver
     ```
   
-1. Puppet Master Memory 調整，預設為 2G。
+1. Puppet Server Memory 調整，預設為 2G。
 
     ```shell
     $ sudo vim /etc/default/puppetserver
@@ -107,7 +107,7 @@ Rack Server 是由 Ruby 開發的 Web Service，將 HTTPS 請求重新格式化�
     certname 是用來生成這台 node 憑證使用，Puppet 之間的溝通是使用 SSL 交握。
 
 
-1. 嘗試啟動 Puppet master
+1. 嘗試啟動 Puppet Server
 
     ```shell
     $ sudo systemctl start puppetserver
@@ -121,7 +121,7 @@ Rack Server 是由 Ruby 開發的 Web Service，將 HTTPS 請求重新格式化�
     tcp  LISTEN  0  50  :::8140  :::*  users  (("java",pid=27866,fd=32))
     ```
 
-1. 初始化 Puppet server 的 ca 憑證，如果沒有執行 Agent 會無法透過 CA 來產生 Agent 的 certificate。
+1. 初始化 Puppet Server 的 ca 憑證，如果沒有執行 Agent 會無法透過 CA 來產生 Agent 的 certificate。
 
     ```shell
     $ sudo puppet master --verbose --no-daemonize
@@ -132,6 +132,8 @@ Rack Server 是由 Ruby 開發的 Web Service，將 HTTPS 請求重新格式化�
     ```shell
     $ sudo ufw allow 8140
     ```
+
+到這邊算是完成了 Puppet Server 的安裝，下一篇將會帶領大家在 Node 上安裝 Agent 和 Server 進行溝通。
 
 [puppet-platform]: https://docs.puppet.com/puppet/5.3/puppet_platform.html
 [puppet-conf]: https://docs.puppet.com/puppet/5.3/configuration.html
