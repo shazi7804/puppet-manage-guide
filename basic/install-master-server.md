@@ -1,8 +1,4 @@
-# Day 5 - Master-Agent 架構 - Master 安裝
-
-來到 Day-5 了阿 ～～～～～～ (無病呻吟)，感覺好辛苦。
-
-今天要講 Puppet 中的 Master / Agent 這個架構了，然後直接就要帶大家來安裝一下 Puppet Server !!
+# 安裝 Master Server
 
 要安裝之前首先先介紹一下：
 
