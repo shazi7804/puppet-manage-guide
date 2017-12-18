@@ -4,6 +4,8 @@ Module 是 Puppet 管理中非常重要的一環，利用已經編寫好的 modu
 
 ## 從哪裡找 Module
 
+除了我們自己寫的 module 以外，還可以直接用別人已經寫好的 module 當你開始會用 module 的時候，就會發現其實 Puppet 的 module 型態幾乎無所不在，利用 module 你可以輕鬆的兜出 infrastructure，但是你在使用別人 module 的時候 **篩選就是非常重要的議題** 用到對的 module 讓你上天堂，天天準時下班，用到錯的 module 你會恨到乾脆自己來寫 module。
+
 ### 從 Puppetforge 獲取 module
 
 [Puppetforge][puppetforge] 是 Puppet 提供的一個 module 管理平台，你可以透過這個平台來找到各種你想要的 Puppet module。
