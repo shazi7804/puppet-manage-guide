@@ -15,7 +15,7 @@ catalog 是記錄每個受管 Node 的資料，在 Puppet 中又分為兩種：
 
 ![puppetmaster-agent](/assets/images/puppetmaster-agent.png)
 
-基於 `pull-based` 的架構
+基於 `pull-based` 的架構 (官方建議)
 
 Puppet 的 Master / Agent 架構通常適用於有規模的環境佈署，由 Puppet Master 提供 configuration，在每台要被佈署的 Node 安裝 Puppet agent 向 Master 獲取 configuration。
 
@@ -25,6 +25,8 @@ Agent 透過 catalog 更新完畢後，將 report 回傳給 Puppet Master。
 
 ## Masterless
 
+![puppet-apply](/assets/images/puppet-apply.png)
+
 基於 `push-based` 的架構
 
 無 Master 又稱獨立佈署的架構，透過 `Puppet apply` 進行單機佈署的方式達成。
@@ -32,6 +34,8 @@ Agent 透過 catalog 更新完畢後，將 report 回傳給 Puppet Master。
 Masterless 很常被應用於 Docker or Vagrant 等 image 環境使用，通常適用於數量少的環境。
 
 ## Tasks and Plans
+
+![puppet-bolt](/assets/images/puppet-bolt.png)
 
 Puppet tasks and plans 是 puppet 推出基於 `push-based` 的一次性的臨時佈署，與 Ansible 的方式相似，彌補 Puppet 長期以來使用 `pull-based` 必須等待 deploy time 的缺點。
 

@@ -39,7 +39,8 @@
 - [測試](test/README.md)
 
 - [佈署到其他平台](deploy/README.md)
-    - [佈署到 Docker](deploy/how-to-build-docker.container.md)
-    - [佈署到 AWS AMI](deploy/how-to-build-docker.container.md)
+    - [如何使用 Puppet 佈署 Docker](deploy/how-to-build-docker.container.md)
+    - [如何使用 Puppet 佈署 AWS AMI](deploy/how-to-build-aws-ami.md)
+    - [如何使用 Puppet 佈署 Vagrant](deploy/how-to-build-vagrant.md)
 
 - [疑難雜症Q&A](qa/README.md)
