@@ -1,4 +1,4 @@
-# 處理 resource 的先後順序
+# 處理 Resource 之間的順序
 
 開始寫 Puppet code 之後總是會遇到有些命令要先執行、後執行等相依性的東西，例如：要先安裝 nginx 後才能處理 service 的啟動，如果先執行 service，就會出現找不到 nginx package 的問題。
 

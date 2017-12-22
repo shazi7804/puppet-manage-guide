@@ -16,7 +16,7 @@
         - [實作 policy-based autosigning](basic/auth/how-to-policy-based-autoscaling.md)
     - [第一個 manifests 設定](basic/how-to-write-manifests.md)
     - [第一個 module 設定](basic/how-to-write-module.md)
-    - [處理 resource 的先後順序](basic/how-to-use-resource-older.md)
+    - [處理 Resource 之間的順序](basic/how-to-use-resource-older.md)
     - [怎麼使用 Hiera data](basic/how-to-use-hiera-data.md)
 
 - [Resource 特別介紹篇](resource/README.md)
