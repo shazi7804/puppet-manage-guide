@@ -17,6 +17,7 @@
     - [第一個 manifests 設定](basic/how-to-write-manifests.md)
     - [第一個 module 設定](basic/how-to-write-module.md)
     - [處理 Resource 之間的順序](basic/how-to-use-resource-older.md)
+    - [Puppet 內建的檔案系統](basic/puppet-file-system.md)
     - [怎麼使用 Hiera data](basic/how-to-use-hiera-data.md)
 
 - [Resource 特別介紹篇](resource/README.md)
