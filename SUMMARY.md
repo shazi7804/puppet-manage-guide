@@ -29,6 +29,7 @@
     - [VSCode plugin for Puppet](advanced/vscode-puppet-plugin.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
     - [怎麼加密 Hiera data](advanced/how-to-encrypt-hiera-data.md)
+    - [用 templates 來處理檔案內容](advanced/how-to-use-templates.md)
     - [讓 Puppet 進 git 版控](advanced/how-to-use-puppet-from-git.md)
     - [備份與還原](advanced/backup-and-restore.md)
 
