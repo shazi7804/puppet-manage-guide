@@ -94,7 +94,7 @@ end
 
 透過 Dashboard 你可以看到被拋回來的資料
 
-[puppet-facter-dashboard](assets/images/puppet-facter-dashboard.png)
+![puppet-facter-dashboard](assets/images/puppet-facter-dashboard.png)
 
 或是直接透過 [Puppet API][puppet-api] 來取得。
 
