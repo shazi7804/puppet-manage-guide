@@ -1,5 +1,6 @@
 # 實作 LAMP
 
+
 LAMP 是最常用到的 Web Server 架構之一，用 Puppet 來實作這種常用的架構是再實用不過。
 
 ## 學習項目
@@ -44,6 +45,24 @@ class { 'apache':
 ```puppet
 $apache_modules = ['rewrite', 'actions', 'ssl', 'worker']
 class { "apache::mod::${apache_modules}": }
+```
+
+再來是 VirtualHost 的部份，讓 Apache 可以跑 CGI
+
+```
+class { 'apache::vhosts':
+  vhosts => {
+    'demo' => {
+      'server_name'   => 'example.com',
+      'docroot'       => '/var/www/demo',
+      'docroot_owner' => 'www-data',
+      'docroot_group' => 'www-data',
+      'port'          => '80',
+      'override'      => 'All',
+      'options'       => ['-Indexes', '+ExecCGI'],
+    },
+  },
+}
 ```
 
 ### Fcgid
@@ -116,6 +135,20 @@ class { '::mysql::server':
   remove_default_accounts => true,
 }
 ```
+
+驗證的部份就放個 phpinfo 來試試
+
+```
+file { '/var/www/demo/index.php':
+    ensure  => file,
+    owner   => 'www-data',
+    group   => 'www-data',
+    mode    => '0400',
+    content => '<?php phpinfo(); ?>',
+  }
+```
+
+最後確認能跑出 phpinfo 大致上就可以開始 deploy 你的 code 上線囉 !!
 
 
 

@@ -2,6 +2,8 @@
 
 Nginx 和 NodeJS 也是在實務上常遇到的，面對這樣的常用的項目，我會讓他盡可能的彈性，透過不同的參數實現不同的設定，那麼 hiera 就是必會的功能。
 
+在這個範例中，使用我在 [104](www.104.com.tw) 寫的  [corp104_nvm](https://github.com/104corp/puppet-corp104_nvm) 來使用，主要是用 nvm 來管裡 nodejs 真的好用很多。這個 module 做了 proxy 的判斷，是因為在公司內的環境要到 internet 的話皆須透過 Proxy 才能出去，而 nvm 的使用幾乎都是透過 internet 來存取，所以 proxy 在 module 上的支援就相對重要。
+
 ## 學習項目
 
 - hiera
@@ -119,14 +121,13 @@ profile::nginx::stub_status: true
 profile::nginx::gzip: 'on'
 profile::nginx::gzip_types: 'text/plain text/css text/xml text/javascript application/json application/x-javascript application/javascript application/xml'
 profile::nginx::gzip_comp_level: 6
-profile::nginx::nodejs::node_version: '8.8.0'
+profile::nginx::nodejs::node_version: '8.9.0'
 profile::nginx::nodejs::upstream_members:
   - 'localhost:8080'
 profile::nginx::nodejs::full_http_proxy: ~
 ```
 
-從這個範例會安裝 Nginx 並且 Proxy 8080 port，nvm 則會安裝 nodejs 8.8.0 的版本。
-
+從這個範例會安裝 Nginx 並且 Proxy 8080 port，nvm 則會安裝 nodejs 8.9.0 的版本。
 
 
 
