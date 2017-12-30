@@ -35,6 +35,7 @@ Nginx 和 NodeJS 也是在實務上常遇到的，面對這樣的常用的項目
 
 ```puppet
 class profile::nginx (
+  String $worker_processes,
   Integer $worker_connections,
   Integer $worker_rlimit_nofile,
   String $server_tokens,
@@ -44,6 +45,7 @@ class profile::nginx (
   Integer $gzip_comp_level,
 ){
   class { 'nginx':
+    worker_processes     => $worker_processes,
     server_tokens        => $server_tokens,
     worker_connections   => $worker_connections,
     worker_rlimit_nofile => $worker_rlimit_nofile,
@@ -109,6 +111,7 @@ class profile::nginx::nodejs (
 最後用 [hiera](basic/how-to-use-hiera-data.md) 把參數補上。
 
 ```yaml
+profile::nginx::worker_processes: 'auto'
 profile::nginx::worker_connections: 4096
 profile::nginx::worker_rlimit_nofile: 204800
 profile::nginx::server_tokens: 'off'
