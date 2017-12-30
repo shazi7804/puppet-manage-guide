@@ -11,4 +11,6 @@ service { 'apache2':
 }
 ```
 
-ensure 定義這個服務的狀態，enable 則是定義在 on boot 的時候的狀態。
+eunsure 定義這個服務的狀態，enable 則是定義在 on boot 的時候的狀態。
+
+[service-provider]: https://puppet.com/docs/puppet/5.3/types/service.html#service-attribute-provider
