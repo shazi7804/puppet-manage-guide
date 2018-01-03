@@ -16,13 +16,13 @@ aci (App Container Image) 是用來 build [App Container][app-container] 的工�
 
 在有安裝 puppet 的機器上執行 module install
 
-```
+```shell
 $ puppet module install puppetlabs/image_build
 ```
 
 執行 `puppet docker` 就會看到 `docker`功能啟用了，即使在 macOS 上也能動
 
-```
+```shell
 $ puppet help docker
 USAGE: puppet docker <action> [--from STRING]
 ...
@@ -43,7 +43,7 @@ USAGE: puppet docker <action> [--from STRING]
 
 - [**Puppetfile**][puppetfile] 用來定義 include 的 module。
 
-```
+```ruby
 forge 'https://forgeapi.puppetlabs.com'
 
 mod 'puppetlabs/apache'
@@ -56,7 +56,7 @@ mod 'puppetlabs/apt'
 
 - **manifests/init.pp** 寫這個 image 的 resource 定義。
 
-```
+```puppet
 $php_version = '7.0'
 
 class { 'apache':
@@ -156,7 +156,7 @@ image_name: shazi7804/apache
 
 準備好這些檔案後就可以開始 build image
 
-```
+```shell
 $ puppet docker build
 ...
 Successfully built f1ef9868c711
@@ -169,13 +169,13 @@ Successfully tagged shazi7804/apache:latest
 
 你只要簡單的執行一行指令就可以輸出 Dockerfile 內容
 
-```
+```shell
 $ puppet docker dockerfile
 ```
 
 或是直接輸出檔案
 
-```
+```shell
 $ puppet docker dockerfile > Dockerfile
 ```
 
