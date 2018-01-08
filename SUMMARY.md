@@ -40,6 +40,9 @@
     - [實作 Nginx 和 Nodejs](workshop/build-nginx-and-nodejs.md)
 
 - [測試](test/README.md)
+    - [puppet-lint](test/puppet-lint.md)
+    - [rspec-puppet](test/rspec-puppet.md)
+    - [beaker-rspec](test/beaker-rspec.md)
 
 - [佈署到其他平台](deploy/README.md)
     - [如何使用 Puppet 佈署 Docker](deploy/how-to-build-docker-container.md)
