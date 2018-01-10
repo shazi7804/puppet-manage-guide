@@ -15,3 +15,5 @@ $ gem install puppet-lint
 ```
 $ puppet-lint /etc/puppet/modules
 ```
+
+[puppet-lint]: http://puppet-lint.com/

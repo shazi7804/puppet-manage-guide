@@ -21,3 +21,7 @@ $ gem install beaker
 ```
 $ gem install serverspec
 ```
+
+[beaker]: https://github.com/puppetlabs/beaker/
+[serverspec]: http://serverspec.org/
+[beaker-rspec]: https://github.com/puppetlabs/beaker-rspec/

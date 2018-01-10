@@ -26,6 +26,7 @@
     - [service 服務控制](resource/service.md)
 
 - [進階管理](advanced/README.md)
+    - [效能調教](advanced/performance.md)
     - [VSCode plugin for Puppet](advanced/vscode-puppet-plugin.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
     - [怎麼加密 Hiera data](advanced/how-to-encrypt-hiera-data.md)

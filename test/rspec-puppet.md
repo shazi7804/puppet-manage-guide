@@ -29,3 +29,5 @@ end
 
 - include profile::base
 - include profile::user
+
+[rspec-puppet]: http://rspec-puppet.com/
