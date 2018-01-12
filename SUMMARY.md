@@ -39,6 +39,7 @@
     - [實作 Linux 基礎環境設定](workshop/build-linux-base.md)
     - [實作 LAMP](workshop/build-lamp.md)
     - [實作 Nginx 和 Nodejs](workshop/build-nginx-and-nodejs.md)
+    - [實作 Facter 取得 OpenSSL 版本](workshop/facter-openssl.md)
 
 - [測試](test/README.md)
     - [puppet-lint](test/puppet-lint.md)
