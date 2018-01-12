@@ -23,7 +23,7 @@ NA
 
 - /etc/puppetlabs/code/modules/profile/lib/facter/openssl_version.rb
 
-```erb
+```ruby
 # Make openssl version available as a fact
 
 Facter.add(:openssl_version) do
