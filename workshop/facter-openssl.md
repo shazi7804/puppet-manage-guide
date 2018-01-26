@@ -51,7 +51,7 @@ end
 
 ```bash
 $ facter --custom-dir=/opt/puppetlabs/puppet/cache/lib/facter openssl_version
-1.0.2.g
+1.0.2g
 ```
 
 或是在 Puppetdb 取得所有 Node 的 OpenSSL 版本。
