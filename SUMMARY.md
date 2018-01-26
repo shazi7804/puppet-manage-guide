@@ -35,6 +35,9 @@
     - [讓 Puppet 進 git 版控](advanced/how-to-use-puppet-from-git.md)
     - [備份與還原](advanced/backup-and-restore.md)
 
+- [Bolt](bolt/README.md)
+    - [介紹 Bolt](bolt/intro.md)
+
 - [WorkShop](workshop/README.md)
     - [實作 Linux 基礎環境設定](workshop/build-linux-base.md)
     - [實作 LAMP](workshop/build-lamp.md)
