@@ -33,7 +33,7 @@ Facter.add(:openssl_version) do
     if File.exist? '/opt/openssl/bin/openssl'
       Facter::Core::Execution.exec('/opt/openssl/bin/openssl version 2>&1').match(/^OpenSSL (\d+\.\d+\.\d+[a-z]).*$/)[1]
     else Facter::Util::Resolution.which('openssl')
-      Facter::Core::Execution.exec('openssl version 2>&1').match(/^OpenSSL (\d+\.\d+\.\d+[a-z]).*$/)[1]
+      Facter::Core::Execution.exec('openssl version 2>&1').match(/^OpenSSL (\d+\.\d+\.\d+([a-z]|\-[a-z]+)).*$/)[1]
     end
   end
 end
