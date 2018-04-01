@@ -44,7 +44,10 @@ class { 'apache':
 
 ```puppet
 $apache_modules = ['rewrite', 'actions', 'ssl', 'worker']
-class { "apache::mod::${apache_modules}": }
+
+$apache_modules.each |String $module| {
+  class { "apache::mod::${module}": }
+}
 ```
 
 再來是 VirtualHost 的部份，讓 Apache 可以跑 CGI
