@@ -86,7 +86,7 @@ file { '/usr/local/bin/php-wrapper':
   owner  => root,
   group  => root,
   mode   => '0755',
-  source => "puppet:///modules/${module_name}/fcgid_php/php-wrapper";
+  source => "puppet:///modules/${module_name}/fcgid_php/php-wrapper",
 }
 ```
 
