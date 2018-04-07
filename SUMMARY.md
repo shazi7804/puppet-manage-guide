@@ -25,6 +25,9 @@
     - [package 安裝套件](resource/package.md)
     - [service 服務控制](resource/service.md)
 
+- [Function 特別介紹篇](function/README.md)
+    - [defined 判斷資源是否存在](function/defined.md)
+
 - [進階管理](advanced/README.md)
     - [效能調教](advanced/performance.md)
     - [VSCode plugin for Puppet](advanced/vscode-puppet-plugin.md)
