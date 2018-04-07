@@ -1,4 +1,4 @@
-# defined 判斷資源是否存在
+# defined 判斷資源是否存在
 
 用到 defined 最常遇到的應該是 Class 重複宣告，Resource 只要有正確的命名比較不會遇到衝突，簡單寫幾個範例 defined 的用法：
 
