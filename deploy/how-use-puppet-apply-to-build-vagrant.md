@@ -1,3 +1,5 @@
+# 如何使用 Puppet Apply 佈署 Vagrant
+
 ## 什麼是 Vagrant ?
 
 [`HashiCorp`][hashicorp] 出品的 ~~HashiCorp 產品必屬佳作~~ `Vagrant`，簡單介紹一下 `Vagrant` 是一款用於構建及配置虛擬開發環境的軟體，基於 `Ruby` 開發，主要使用 `Oracle` 的開源 `VirtualBox` 虛擬化系統。
@@ -21,11 +23,11 @@
 `Vagrant` 的安裝也很簡單，以 `Ubuntu` 為例
 
 ```bash
-$ wget https://releases.hashicorp.com/vagrant/2.0.1/vagrant_2.0.1_x86_64.deb
-$ dpkg -i vagrant_2.0.1_x86_64.deb
+$ wget https://releases.hashicorp.com/vagrant/2.0.4/vagrant_2.0.4_x86_64.deb
+$ dpkg -i vagrant_2.0.4_x86_64.deb
 $ vagrant version
-Installed Version: 2.0.1
-Latest Version: 2.0.1
+Installed Version: 2.0.4
+Latest Version: 2.0.4
 ```
 
 ### librarian-puppet 安裝
@@ -42,7 +44,7 @@ $ gem install librarian-puppet
 
 ---
 
-## 用 Puppet 來 build Vagrant
+## 用 Puppet Apply 來 build Vagrant
 
 其實用 `Puppet` 來 build Vagrant 和前面兩篇的 `Docker` 和 `Packer` 一樣，差別在於不同的 `Provisioning` 設定的方式不同。
 
@@ -258,10 +260,9 @@ Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Enjoy your new vbox.
 ```
 
-最後跑完最後一筆 shell 出現 `Enjoy your new vbox.` 就成功了，這時你的 Virtualbox 應該會出現一台虛擬機。
-
 此時你可以檢查 http://localhost:8080 要能看到 `phpinfo`。
 
+完成後就用 `vagrant ssh` 來登入虛擬機吧！
 
 [hashicorp]: https://hashicorp.com
 [librarian-puppet]: http://librarian-puppet.com
