@@ -174,7 +174,6 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
 
-  config.vm.provision "shell", path: "scripts/init.sh"
   config.vm.provision "shell", path: "scripts/puppet_install.sh"
 
   # Enable the Puppet provisioner, with will look in manifests
@@ -196,16 +195,6 @@ end
 
 LAB 的最後會測試將 guest 80 port forward 到 host 的 8080 port 來測試是否正常。
 
-- `scripts/init.sh` 這隻拿來改密碼，預設 `Ubuntu` 的密碼實在太不親民了。
-
-```bash
-#!/bin/bash
-echo "ubuntu:ironman" | sudo chpasswd
-```
-
-> 使用者：ubuntu
-> 密碼：ironman
-
 - `scripts/puppet_install.sh` 這隻用來安裝 Puppet agent。
 
 ```bash
@@ -213,6 +202,10 @@ echo "ubuntu:ironman" | sudo chpasswd
 wget https://apt.puppetlabs.com/puppet5-release-xenial.deb
 sudo dpkg -i puppet5-release-xenial.deb
 sudo apt update && sudo apt install puppet-agent -y
+sudo tee /etc/puppetlabs/puppet/puppet.conf <<EOF
+[main]
+  environment = production
+EOF
 ```
 
 - `metadata.json` 這個是用來定義這個 Vagrant box 的 `metadata`，主要用來上傳 Vagrant box 顯示的資訊，沒有一定需要。 

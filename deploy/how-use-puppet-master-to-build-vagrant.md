@@ -65,6 +65,19 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+然後 puppet_install.sh 裡面寫 puppet-agent 的安裝方式
+
+```bash
+#!/bin/bash
+wget https://apt.puppetlabs.com/puppet5-release-xenial.deb
+sudo dpkg -i puppet5-release-xenial.deb
+sudo apt update && sudo apt install puppet-agent -y
+sudo tee /etc/puppetlabs/puppet/puppet.conf <<EOF
+[main]
+  environment = production
+EOF
+```
+
 如果該 node 已經有授權過的話則可以用 `client_cert_path` 和 `client_private_key_path` 來指定 cert / key。
 
 ---
