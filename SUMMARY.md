@@ -28,13 +28,16 @@
 - [Function 特別介紹篇](function/README.md)
     - [defined 判斷資源是否存在](function/defined.md)
 
+- [Facter](facter/README.md)
+    - [使用 Facter 取得 Server 資訊](facter/how-to-use-facter.md)
+    - [自定義 facter](facter/write-custom-facter.md)
+
 - [進階管理](advanced/README.md)
     - [效能調教](advanced/performance.md)
     - [VSCode plugin for Puppet](advanced/vscode-puppet-plugin.md)
     - [Role and Profile pattern 的管理方式](advanced/role-and-profile-pattern.md)
     - [怎麼加密 Hiera data](advanced/how-to-encrypt-hiera-data.md)
     - [用 templates 來處理檔案內容](advanced/how-to-use-templates.md)
-    - [用 facter 取得 Node 參數](advanced/how-to-use-facter.md)
     - [讓 Puppet 進 git 版控](advanced/how-to-use-puppet-from-git.md)
     - [備份與還原](advanced/backup-and-restore.md)
 
